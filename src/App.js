@@ -1,26 +1,18 @@
 import './App.css';
+import NavBar from './components/NavBar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFire } from '@fortawesome/free-solid-svg-icons';
 
 // consider moving styles to css style page
 
 function App() {
   return (
     <div className="App">
-      <nav style={{
-        display: 'flex',
-        justifyContent: 'space-between'
-      }}>
-        {/* These links will either be links to pages OR links to page locations */}
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Experience</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-        <a href="#">Resume</a>
-      </nav>
+      <NavBar />
 
       <div id="about-me-field">
         <img src='https://media-exp1.licdn.com/dms/image/C5603AQGBQ9umKsqvrw/profile-displayphoto-shrink_800_800/0/1634181442830?e=1652313600&v=beta&t=6JRYUmH2ZypD9du4ubhjhN9CRsiwAvR9cnuNQmPsfOQ' id='profile-picture' alt='profile picture' width={300} height={300}></img>
-        <p>Description about myself. How I got into coding and where I'd like to take it</p>
+        <p><FontAwesomeIcon icon={faFire} />Description about myself. How I got into coding and where I'd like to take it</p>
       </div>
 
       <div id="experience-field">
@@ -43,7 +35,10 @@ function App() {
 
       <footer style={{
         display: 'flex',
-        'justifyContent': 'flex-end'
+        'justifyContent': 'flex-end',
+        // 'border-width': '10px',
+        // 'borderBlockStyle': 'solid',
+        // 'borderColor': 'green'
         // justifyContent: 'space-between',
         // 'flexDirection': 'column'
       }}>
