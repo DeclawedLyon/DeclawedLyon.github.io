@@ -1,5 +1,10 @@
 .App {
+  --primary: #2E5266FF;
+  --secondary: #6E8898FF;
+  --accent1: #9FB1BCFF;
+  --accent2: #D3D0CBFF;
   text-align: center;
+  /* ?? Use this simple cream background ?? */
   background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png')
 }
 
@@ -26,6 +31,39 @@
 .caution {
   background: repeating-linear-gradient(45deg, yellow 0px, yellow 20px, black 20px, black 40px)
 }
-.navbar {
+#nav-bar {
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary);
+  width: 100vw;
+  /* margin: 10px; */
+  /* padding-inline: 10px; */
+  /* padding-right: 10px;
+  padding: auto;
+  padding-left: 50px; */
+}
+.nav-item {
+  color: var(--accent2);
+}
+
+#about-me-field {
+  margin-top: 50px;
+  padding-top: 50px;
+  border: 5px solid black;
+}
+
+#experience-field {
+  border: 5px solid green;
+  
+}
+
+#project-field {
+  border: 5px solid peru;
+  
+}
+
+#contact-me-field {
+  border: 5px solid magenta;
+  
 }
