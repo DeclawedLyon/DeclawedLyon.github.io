@@ -23,7 +23,7 @@ function App() {
           </ul>
         <p><FontAwesomeIcon icon={faFire} /> Description about myself. How I got into coding and where I'd like to take it</p>
         </div>
-        <FontAwesomeIcon icon={solid('fire')} />
+        {/* <FontAwesomeIcon icon={solid('fire')} /> */}
       </div>
 
       <div id="experience-field">
@@ -76,9 +76,18 @@ function App() {
         // justifyContent: 'space-between',
         // 'flexDirection': 'column'
       }}>
-        <a href='#'>github<FontAwesomeIcon icon={brands('github-square')} /></a>
-        <a href='#'>linkedIn<FontAwesomeIcon icon={brands('linkedin')} /></a>
-        <a href='#'>resume<FontAwesomeIcon icon={solid('file-download')} /></a>
+        <div id='quick-links'>
+          <a href='#'>
+            {/* <span>github</span> */}
+            <FontAwesomeIcon icon={brands('github-square')} /></a>
+          <a href='#'>
+            {/* <span>linkedIn</span> */}
+            <FontAwesomeIcon icon={brands('linkedin')} /></a>
+          <a href='#'>
+            {/* <span>resume</span> */}
+          <FontAwesomeIcon icon={solid('file-download')} /></a>
+
+        </div>
       </footer>
     </div>
   );
