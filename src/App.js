@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons';
-
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 // consider moving styles to css style page
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
 
       <div id="about-me-field">
         <img class='profile-picture' src='https://media-exp1.licdn.com/dms/image/C5603AQGBQ9umKsqvrw/profile-displayphoto-shrink_800_800/0/1634181442830?e=1652313600&v=beta&t=6JRYUmH2ZypD9du4ubhjhN9CRsiwAvR9cnuNQmPsfOQ' id='profile-picture' alt='profile picture' width={300} height={300}></img>
-        <p><FontAwesomeIcon icon={faFire} />Description about myself. How I got into coding and where I'd like to take it</p>
+        <p><FontAwesomeIcon icon={faFire} /> Description about myself. How I got into coding and where I'd like to take it</p>
+        {/* <FontAwesomeIcon icon={brands('github')} /> */}
       </div>
 
       <div id="experience-field">

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png')
 }
 
 .App-header {
@@ -14,6 +15,17 @@
 }
 
 .profile-picture {
+  margin: auto;
   border: 10px solid black;
   border-radius: 50%;
+}
+/* Implement card with profile-picture-background class applied */
+.profile-picture-background {
+  background: linear-gradient(35deg, #CCFFFF, #FFCCCC, rgb(204, 204, 255));
+}
+.caution {
+  background: repeating-linear-gradient(45deg, yellow 0px, yellow 20px, black 20px, black 40px)
+}
+.navbar {
+  position: fixed;
 }
