@@ -14,7 +14,7 @@ export default function NavBar(props) {
   return (
     <nav id="nav-bar">
       {/* These links will either be links to pages OR links to page locations */}
-      <a href="#" href='#' className="nav-item"><img src={testLogo} className='website-logo'></img>Logo</a>
+      <a href="#" href='#' className="nav-item"><img src={testLogo} className='website-logo'></img></a>
       <a href="#" className="nav-item">About</a>
       <a href="#" className="nav-item">Experience</a>
       <a href="#" className="nav-item">Projects</a>

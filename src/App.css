@@ -6,6 +6,7 @@
   --word-color: rgb(96, 96, 96);
   --word-hover: rgb(13, 13, 13);
   --nav-background: white;
+  --header-height: 70px;
   text-align: center;
   /* ?? Use this simple cream background ?? */
   background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png')
