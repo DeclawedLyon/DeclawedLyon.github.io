@@ -1,17 +1,19 @@
 import './nav-bars.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+import { useContext } from 'react';
+import { StateContext } from '../context/StateContext';
 
 export default function SideBar () {
+  const {state} = useContext(StateContext)
   return (
-    <div className='side-bar'>
+    <aside className='side-bar'>
       {/* <a href="#" className="nav-item">Logo</a> */}
-      <h1>hello world</h1>
-      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('fire')} />About</a>
-      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('tasks-alt')}/> Skills</a>
-      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('history')}/>Experience</a>
-      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('project-diagram')} />Projects</a>
-      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('address-card')} />Contact</a>
-    </div>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('fire')} />{state.open && 'About'}</a>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('tasks-alt')}/> {state.open && 'Skills'}</a>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('history')}/>{state.open && 'Experience'}</a>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('project-diagram')} />{state.open && 'Projects'}</a>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('address-card')} />{state.open && 'Contact'}</a>
+    </aside>
   )
 }

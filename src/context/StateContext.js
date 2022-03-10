@@ -1,12 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-export const stateContext = React.createContext();
+export const StateContext = React.createContext();
 
 export default function StateProvider(props) {
   const [state, setState] = useState({
     test: 'test works',
-    isLoggedIn: true
+    isLoggedIn: true,
+    sideBarIsOpen: false
   });
 
   const providerData = {
@@ -15,9 +16,9 @@ export default function StateProvider(props) {
   }
 
   return (
-    <stateContext.Provider value={providerData}>
+    <StateContext.Provider value={providerData}>
       {props.children}
-    </stateContext.Provider>
+    </StateContext.Provider>
   )
 }
 

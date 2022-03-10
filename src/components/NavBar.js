@@ -2,10 +2,10 @@ import './nav-bars.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 import { useContext } from 'react'
-import { stateContext } from '../context/StateContext'
+import { StateContext } from '../context/StateContext'
 
 export default function NavBar(props) {
-  const { state } = useContext(stateContext);
+  const { state } = useContext(StateContext);
   const menuClick = () => {
     // open / close sidebar
     console.log(state.test, state.isLoggedIn)
