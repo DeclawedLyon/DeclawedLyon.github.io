@@ -4,23 +4,28 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import { useContext } from 'react'
 import { StateContext } from '../context/StateContext'
 import testLogo from '../images/testLogo.png'
+import testLogoMini from '../images/testLogoMini-1.png'
 
 export default function NavBar(props) {
-  const { state } = useContext(StateContext);
+  const { state, changeMenuState } = useContext(StateContext);
   const menuClick = () => {
     // open / close sidebar
     console.log(state.test, state.isLoggedIn)
+    
   }
   return (
     <nav id="nav-bar">
       {/* These links will either be links to pages OR links to page locations */}
+      <div className='logo'>
       <a href="#" href='#' className="nav-item"><img src={testLogo} className='website-logo'></img></a>
+      {/* <img src={testLogoMini}></img> */}
+      </div>
       <a href="#" className="nav-item">About</a>
       <a href="#" className="nav-item">Experience</a>
       <a href="#" className="nav-item">Projects</a>
       <a href="#" className="nav-item">Contact</a>
       <button className='menu-icon-btn'>
-        <FontAwesomeIcon icon={solid('bars')} className="menu-icon" onClick={() => menuClick()}/>
+        <FontAwesomeIcon icon={solid('bars')} className="menu-icon" onClick={() => changeMenuState()}/>
       </button>
 
       {/* <a href="#">Resume</a> */}

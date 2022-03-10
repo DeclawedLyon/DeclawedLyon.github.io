@@ -1,15 +1,23 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StateProvider from './context/StateContext'
-import { useState, createContext } from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+// const githubPath = 'DeclawedLyon.github.io';
 
 ReactDOM.render(
-  <StateProvider>
-    <App />
-  </StateProvider>,
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <StateProvider>
+      <Routes>
+        <Route exact path="/" element={<App />}>
+        </Route>
+      </Routes>
+    </StateProvider>
+  </BrowserRouter>
+  ,
   document.getElementById('root')
 );
 

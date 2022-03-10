@@ -5,11 +5,17 @@
   --accent2: #D3D0CBFF;
   --word-color: rgb(96, 96, 96);
   --word-hover: rgb(13, 13, 13);
+
+  --font-color: rgb(136, 146, 176);
+  --selection: rgb(204, 214, 246);;
+  --background-color: rgb(10, 25, 47);
+
   --nav-background: white;
   --header-height: 70px;
   text-align: center;
   /* ?? Use this simple cream background ?? */
-  background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png')
+  background: var(--background-color);
+  /* url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png') */
 }
 
 *, *::before, *::after {
