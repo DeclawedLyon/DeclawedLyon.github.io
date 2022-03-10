@@ -1,6 +1,15 @@
+import './nav-bars.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-export default function NavBar() {
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+import { useContext } from 'react'
+import { stateContext } from '../context/StateContext'
 
+export default function NavBar(props) {
+  const { state } = useContext(stateContext);
+  const menuClick = () => {
+    // open / close sidebar
+    console.log(state.test, state.isLoggedIn)
+  }
   return (
     <nav id="nav-bar">
       {/* These links will either be links to pages OR links to page locations */}
@@ -9,6 +18,10 @@ export default function NavBar() {
       <a href="#" className="nav-item">Experience</a>
       <a href="#" className="nav-item">Projects</a>
       <a href="#" className="nav-item">Contact</a>
+      <button className='menu-icon-btn'>
+        <FontAwesomeIcon icon={solid('bars')} className="menu-icon" onClick={() => menuClick()}/>
+      </button>
+
       {/* <a href="#">Resume</a> */}
     </nav>
   )
