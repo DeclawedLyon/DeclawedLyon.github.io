@@ -7,10 +7,11 @@ export default function SideBar () {
     <div className='side-bar'>
       {/* <a href="#" className="nav-item">Logo</a> */}
       <h1>hello world</h1>
-      <a href="#" className="meni-icon"><FontAwesomeIcon icon={solid('fire')} />About</a>
-      <a href="#" className="nav-item">Experience</a>
-      <a href="#" className="nav-item">Projects</a>
-      <a href="#" className="nav-item">Contact</a>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('fire')} />About</a>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('tasks-alt')}/> Skills</a>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('history')}/>Experience</a>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('project-diagram')} />Projects</a>
+      <a href="#" className="menu-icon"><FontAwesomeIcon icon={solid('address-card')} />Contact</a>
     </div>
   )
 }
