@@ -3,6 +3,8 @@
   --secondary: #6E8898FF;
   --accent1: #9FB1BCFF;
   --accent2: #D3D0CBFF;
+  --word-color: gray;
+  --word-hover: green;
   text-align: center;
   /* ?? Use this simple cream background ?? */
   background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png')
@@ -16,7 +18,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--word-color);
 }
 
 .profile-picture {
