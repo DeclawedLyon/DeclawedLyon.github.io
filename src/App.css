@@ -8,27 +8,15 @@
 
   --header-height: 70px;
   --sidebar-width: 50px;
+
   text-align: center;
-  /* ?? Use this simple cream background ?? */
   background: var(--primary);
   color: var(--font-color);
-  /* url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png') */
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: var(--word-color);
-} */
 
 .profile-picture {
   margin: auto;
@@ -43,26 +31,6 @@
   background: repeating-linear-gradient(45deg, yellow 0px, yellow 20px, black 20px, black 40px)
 }
 
-/* #about-me-field {
-  margin-top: 50px;
-  padding-top: 50px;
-  border: 5px solid black;
-}
-
-#experience-field {
-  border: 5px solid green;
-  
-}
-
-#project-field {
-  border: 5px solid peru;
-  
-}
-
-#contact-me-field {
-  border: 5px solid magenta;
-  
-} */
 #content-container {
   margin-top: var(--header-height);
   margin-right: var(--sidebar-width);
@@ -75,31 +43,6 @@
   position: relative;
   background-color: var(--primary);
 }
-
-/* .content-card::before {
-  content: 'Test';
-  position: absolute;
-  background-color: var(--secondary);
-  height: 100%;
-  width: 100%;
-  transition: transform 1s ease-out;
-  transition: 1;
-} */
-
-/* .content-card-cover {
-  position: absolute;
-  background-color: var(--secondary);
-  height: 100%;
-  width: 100%;
-  transition: transform 1s ease-out;
-  transition: 1;
-   width: 100em
-} */
-
-/* .content-card:hover {
-  transform: translateX(100%)
-  
-} */
 
 footer {
   align-items: flex-end;

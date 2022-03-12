@@ -9,15 +9,9 @@
   box-shadow: 0 1px 10px 0 rgb(0, 0, 0, 0.2);
   padding: .25rem .5rem;
   margin-bottom: 1rem;
-  /* margin: 10px; */
-  /* padding-inline: 10px; */
-  /* padding-right: 10px;
-  padding: auto;
-  padding-left: 50px; */
   height: var(--header-height);
 }
 
-/* Wouldn't it be cool to have the blue react logo spinning behind my react logo as a cool animation?  */
 .website-logo {
   width: 100px;
 }
@@ -57,18 +51,14 @@
 .side-bar {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   position: fixed;
   top: var(--header-height);
   right: 0;
   height: calc(100vh - var(--header-height));
   width: var(--sidebar-width);
   float: right;
-  /* left: 100px; */
-  /* border: 1px solid black; */
   border-left: 1px solid var(--word-color);
   padding-bottom: 80px;
-  /* padding-top: 5.5rem; */
   z-index: 2;
   background-color: var(--secondary);
   overflow-x: hidden;
@@ -94,15 +84,12 @@
   flex-grow: 1;
   overflow-y: auto;
   margin-top: 2rem;
-  /* height: max-content; */
 }
 
 .footer-id {
   font-size: 1rem;
   text-transform: uppercase;
   writing-mode: vertical-rl;
-  /* text-orientation: upright; */
-  /* transform: rotate(90deg); */
   letter-spacing: 2px;
   color: var(--bold-font-color);
 }
