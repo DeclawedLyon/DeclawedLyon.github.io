@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 // consider moving styles to css style page
 import SideBar from './components/SideBar';
+import Logo from './components/Logo';
 
 function App() {
   return (
@@ -11,32 +12,37 @@ function App() {
       <NavBar />
       <SideBar />
 
-      <div id="about-me-field">
-        <img className='profile-picture' src='https://media-exp1.licdn.com/dms/image/C5603AQGBQ9umKsqvrw/profile-displayphoto-shrink_800_800/0/1634181442830?e=1652313600&v=beta&t=6JRYUmH2ZypD9du4ubhjhN9CRsiwAvR9cnuNQmPsfOQ' alt='profile picture' id='profile-picture' alt='profile picture' width={300} height={300}></img>
-        <div className='content-card'>
-          <div className='content-card-cover'>
-            <h2>About Me</h2>
-          </div>
-          <h3>title</h3> 
-          <hr></hr>
-          <ul>
-            <li>list of skills and languages</li>
-            <li>list of languages and skills</li>
-          </ul>
-        <p><FontAwesomeIcon icon={solid('fire')} /> Description about myself. How I got into coding and where I'd like to take it</p>
-        </div>
-        {/* <FontAwesomeIcon icon={solid('fire')} /> */}
-      </div>
+      <div id='content-container'>
+        <br></br>
+      {/* <Logo height={100} width={160}/> */}
 
-      <div id="experience-field">
-        <div className='content-card'>
-          <div className='content-card-cover'>
-              <h2>Experience (certifications?)</h2>
+
+        <div id="about-me-field">
+          <img className='profile-picture' src='https://media-exp1.licdn.com/dms/image/C5603AQGBQ9umKsqvrw/profile-displayphoto-shrink_800_800/0/1634181442830?e=1652313600&v=beta&t=6JRYUmH2ZypD9du4ubhjhN9CRsiwAvR9cnuNQmPsfOQ' alt='profile picture' id='profile-picture' alt='profile picture' width={300} height={300}></img>
+          <div className='content-card'>
+            {/* <div className='content-card-cover'>
+              <h2>About Me</h2>
+            </div> */}
+            <h3>title</h3> 
+            <hr></hr>
+            <ul>
+              <li>list of skills and languages</li>
+              <li>list of languages and skills</li>
+            </ul>
+          <p><FontAwesomeIcon icon={solid('fire')} /> Description about myself. How I got into coding and where I'd like to take it</p>
           </div>
-          <h3>title</h3>
-          <hr></hr>
-        <p>Job experience and work experience. Describe working on a team in Lighthouse</p>
-        <p>
+          {/* <FontAwesomeIcon icon={solid('fire')} /> */}
+        </div>
+
+        <div id="experience-field">
+          <div className='content-card'>
+            {/* <div className='content-card-cover'>
+                <h2>Experience (certifications?)</h2>
+            </div> */}
+            <h3>title</h3>
+            <hr></hr>
+          <p>Job experience and work experience. Describe working on a team in Lighthouse</p>
+          <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas ultricies mi eget mauris pharetra et ultrices. Pellentesque adipiscing commodo elit at. Sodales ut eu sem integer vitae justo eget. Ultrices dui sapien eget mi proin sed libero enim sed. Tempor id eu nisl nunc mi ipsum faucibus vitae aliquet. Ipsum dolor sit amet consectetur adipiscing. Bibendum ut tristique et egestas quis. Faucibus turpis in eu mi bibendum neque egestas. Leo vel orci porta non. Posuere sollicitudin aliquam ultrices sagittis orci. Gravida neque convallis a cras semper. Egestas dui id ornare arcu odio ut. Augue lacus viverra vitae congue eu. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Fermentum posuere urna nec tincidunt praesent semper feugiat.
 
 Sit amet facilisis magna etiam tempor. Vulputate enim nulla aliquet porttitor lacus. Diam sit amet nisl suscipit. Imperdiet nulla malesuada pellentesque elit eget. At in tellus integer feugiat. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Proin fermentum leo vel orci porta. Integer quis auctor elit sed. Porttitor eget dolor morbi non arcu risus quis. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Cursus turpis massa tincidunt dui ut. Pharetra magna ac placerat vestibulum lectus. Orci ac auctor augue mauris augue neque gravida in.
@@ -77,41 +83,42 @@ Et tortor consequat id porta nibh venenatis cras sed. Pretium quam vulputate dig
 
 Amet cursus sit amet dictum sit amet justo donec enim. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Sit amet nulla facilisi morbi tempus iaculis urna id. Commodo viverra maecenas accumsan lacus vel. Purus sit amet volutpat consequat mauris nunc congue nisi. Euismod lacinia at quis risus sed vulputate odio ut enim. Turpis massa tincidunt dui ut ornare lectus sit amet est. Volutpat blandit aliquam etiam erat velit scelerisque in. Quam adipiscing vitae proin sagittis nisl rhoncus. Suscipit adipiscing bibendum est ultricies integer quis. Eleifend donec pretium vulputate sapien nec sagittis aliquam. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Donec pretium vulputate sapien nec. Aenean et tortor at risus viverra adipiscing at. Urna porttitor rhoncus dolor purus non enim praesent. Tempor orci dapibus ultrices in iaculis. Nunc sed blandit libero volutpat. Ac feugiat sed lectus vestibulum mattis. Massa eget egestas purus viverra accumsan in nisl nisi.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+            </p>
           </div>
-      </div>
-
-      <div id='project-field'>
-        <div className='content-card'>
-          <div className='content-card-cover'>
-              <h2>Projects</h2>
-          </div>
-          <h3>title</h3>
-          <hr></hr>
-        link to projects. Include: Bridge. Tweeter(?). (want to build app for Elevation. link to that(?))
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <a href='#'>Bridge</a>
         </div>
-      </div>
 
-      <div id='contact-me-field'>
-        <div className='content-card'>
-          <div className='content-card-cover'>
-              <h2>Contact</h2>
-          </div>
-          <h3>title</h3>
-          <hr></hr>
-          Quick link to automate emailing me.
-          contact and phone information.
-          Location / working hours / contact hours.
-          <br></br>
+        <div id='project-field'>
+          <div className='content-card'>
+            {/* <div className='content-card-cover'>
+                <h2>Projects</h2>
+            </div> */}
+            <h3>title</h3>
+            <hr></hr>
+          link to projects. Include: Bridge. Tweeter(?). (want to build app for Elevation. link to that(?))
           <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
+          <a href='#'>Bridge</a>
+          </div>
         </div>
-        {/* <a href='#'>Link to my current resume</a> */}
+
+        <div id='contact-me-field'>
+          <div className='content-card'>
+            {/* <div className='content-card-cover'>
+                <h2>Contact</h2>
+            </div> */}
+            <h3>title</h3>
+            <hr></hr>
+            Quick link to automate emailing me.
+            contact and phone information.
+            Location / working hours / contact hours.
+            <br></br>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          {/* <a href='#'>Link to my current resume</a> */}
+        </div>
       </div>
 
       <footer style={{

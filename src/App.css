@@ -1,20 +1,17 @@
 .App {
-  --primary: #2E5266FF;
-  --secondary: #6E8898FF;
-  --accent1: #9FB1BCFF;
-  --accent2: #D3D0CBFF;
-  --word-color: rgb(96, 96, 96);
-  --word-hover: rgb(13, 13, 13);
-
+  --primary: rgb(10, 25, 47);
+  --secondary: rgb(12, 34, 66);
+  --secondary-opaque: rgba(12, 34, 66, 0.5);
   --font-color: rgb(136, 146, 176);
   --selection: rgb(204, 214, 246);;
-  --background-color: rgb(10, 25, 47);
+  --bold-font-color: rgb(100, 255, 218);
 
-  --nav-background: white;
   --header-height: 70px;
+  --sidebar-width: 50px;
   text-align: center;
   /* ?? Use this simple cream background ?? */
-  background: var(--background-color);
+  background: var(--primary);
+  color: var(--font-color);
   /* url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png') */
 }
 
@@ -66,13 +63,20 @@
   border: 5px solid magenta;
   
 } */
+#content-container {
+  margin-top: var(--header-height);
+  margin-right: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+
+}
 
 .content-card {
   position: relative;
   background-color: var(--primary);
 }
 
-.content-card::before {
+/* .content-card::before {
   content: 'Test';
   position: absolute;
   background-color: var(--secondary);
@@ -80,7 +84,7 @@
   width: 100%;
   transition: transform 1s ease-out;
   transition: 1;
-}
+} */
 
 /* .content-card-cover {
   position: absolute;
@@ -107,3 +111,4 @@ footer {
   justify-content: space-between;
   width: 10%;
 }
+
