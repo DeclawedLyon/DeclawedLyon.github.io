@@ -25,6 +25,7 @@ export default function Logo(props) {
   return (
     <div className="logo-container" style={{overflow: 'hidden', height: `${props.height}px,`, width: `${props.width}px`}}>
       <div className='logo-main-cropped-container' style={{height: `${props.height}`}}>
+        {/* hi */}
         <img src={testLogo} alt='logo' className='logo-main-cropped' style={croppedStyle}></img>
       </div>
       <img src={testLogo} alt='logo' className='logo-main' style={mainStyle}></img>

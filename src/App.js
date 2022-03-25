@@ -5,8 +5,16 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 // consider moving styles to css style page
 import SideBar from './components/SideBar';
 import Logo from './components/Logo';
+import AboutMe from './components/AboutMe';
 
 function App() {
+  const codePenLink = 'https://codepen.io/declawedlyon'
+  const linkedInLink = ''
+  const gitHubLink = ''
+  const resume = 'link to resume file in ?public? file.'
+  const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
+  // consider turning languagelist into languageobject with {tech: image} pairs
+  const techList = ['React', 'Angular', 'MongoDB']
   return (
     <div className="App">
       <NavBar />
@@ -15,24 +23,16 @@ function App() {
       <div id='content-container'>
         <br></br>
       {/* <Logo height={100} width={160}/> */}
+      <fieldset>
+        <legend>Hello world</legend>
+        <input type={'radio'} id={'test-1'} name={'test-buttons'} value={'button-1'}></input>
+        <label for='test-1'>Test button 1</label>
+        <input type={'radio'} id={'test-2'} name={'test-buttons'} value={'button-2'}></input>
+        <label for='test-2'>Test button 2</label>
+      </fieldset>
 
 
-        <div id="about-me-field">
-          <img className='profile-picture' src='https://media-exp1.licdn.com/dms/image/C5603AQGBQ9umKsqvrw/profile-displayphoto-shrink_800_800/0/1634181442830?e=1652313600&v=beta&t=6JRYUmH2ZypD9du4ubhjhN9CRsiwAvR9cnuNQmPsfOQ' alt='profile picture' id='profile-picture' alt='profile picture' width={300} height={300}></img>
-          <div className='content-card'>
-            {/* <div className='content-card-cover'>
-              <h2>About Me</h2>
-            </div> */}
-            <h3>title</h3> 
-            <hr></hr>
-            <ul>
-              <li>list of skills and languages</li>
-              <li>list of languages and skills</li>
-            </ul>
-          <p><FontAwesomeIcon icon={solid('fire')} /> Description about myself. How I got into coding and where I'd like to take it</p>
-          </div>
-          {/* <FontAwesomeIcon icon={solid('fire')} /> */}
-        </div>
+        <AboutMe languagesList={languagesList} techList={techList}/>
 
         <div id="experience-field">
           <div className='content-card'>

@@ -20,7 +20,8 @@
 
 .profile-picture {
   margin: auto;
-  border: 10px solid black;
+  /* border: 10px solid white; */
+  box-shadow: 0px 0px 30px 5px rgb(181, 189, 201);
   border-radius: 50%;
 }
 /* Implement card with profile-picture-background class applied */
@@ -54,4 +55,38 @@ footer {
   justify-content: space-between;
   width: 10%;
 }
+/* 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
