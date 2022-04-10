@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 // consider moving styles to css style page
 import SideBar from './components/SideBar';
-import Logo from './components/Logo';
+// import Logo from './components/Logo';
 import AboutMe from './components/AboutMe';
 
 function App() {
@@ -23,13 +23,13 @@ function App() {
       <div id='content-container'>
         <br></br>
       {/* <Logo height={100} width={160}/> */}
-      <fieldset>
+      {/* <fieldset>
         <legend>Hello world</legend>
         <input type={'radio'} id={'test-1'} name={'test-buttons'} value={'button-1'}></input>
         <label for='test-1'>Test button 1</label>
         <input type={'radio'} id={'test-2'} name={'test-buttons'} value={'button-2'}></input>
         <label for='test-2'>Test button 2</label>
-      </fieldset>
+      </fieldset> */}
 
 
         <AboutMe languagesList={languagesList} techList={techList}/>

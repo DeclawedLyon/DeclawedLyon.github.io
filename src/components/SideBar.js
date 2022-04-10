@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 import { useContext } from 'react';
 import { StateContext } from '../context/StateContext';
-import testLogo from '../images/testLogo.png'
-import Logo from './Logo';
+// import testLogo from '../images/testLogo.png'
+// import Logo from './Logo';
 
 export default function SideBar () {
   const { state } = useContext(StateContext)
