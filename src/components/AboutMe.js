@@ -11,10 +11,10 @@ export default function AboutMe(props) {
       <div className='content-card'>
         <h3>title</h3> 
         <hr></hr>
-        <ul>
+        {/* <ul>
           <li>list of skills and languages</li>
           <li>list of languages and skills</li>
-        </ul>
+        </ul> */}
       <p><FontAwesomeIcon icon={solid('fire')} /> Description about myself. How I got into coding and where I'd like to take it</p>
       </div>
     </div>

@@ -7,15 +7,15 @@ export default function WebsiteLinks(props) {
   return (
     <footer>
       <ul id='quick-links'>
-        <li><a href={props.gitHubLink}>
+        <li><a href={props.gitHubLink} target="_blank">
           <FontAwesomeIcon className="footer-link" icon={brands('github-square')} /></a></li>
-        <li><a href={props.linkedInLink}>
+        <li><a href={props.linkedInLink} target="_blank">
           <FontAwesomeIcon className="footer-link" icon={brands('linkedin')} /></a></li>
-        <li><a href={props.codePenLink}>
+        <li><a href={props.codePenLink} target="_blank">
           <FontAwesomeIcon className="footer-link" icon={brands('codepen')} /></a></li>
-        <li><a href={props.linkedInLink}>
+        <li><a href={props.linkedInLink} target="_blank">
           <FontAwesomeIcon className="footer-link" icon={brands('linkedin')} /></a></li>
-        <li><a href={props.linkedInLink}>
+        <li><a href={props.linkedInLink} target="_blank">
           <FontAwesomeIcon className="footer-link" icon={brands('linkedin')} /></a></li>
        <li> <a href={'#'}>
         <FontAwesomeIcon className="footer-link" icon={solid('file-download')} /></a></li>

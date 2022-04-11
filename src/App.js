@@ -1,8 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar';
-// consider moving styles to css style page
 import SideBar from './components/SideBar';
-// import Logo from './components/Logo';
 import AboutMe from './components/AboutMe';
 import WebsiteLinks from './components/WebsiteLinks';
 
@@ -11,18 +9,16 @@ function App() {
   const linkedInLink = 'https://www.linkedin.com/in/declan-lyons-099052223/'
   const gitHubLink = 'https://github.com/declawedlyon'
   const codeCampLink = "https://www.freecodecamp.org/Declawed_Lyon"
+  const codeCampCertificates = {
+    responsiveWebDesign: 'https://freecodecamp.org/certification/Declawed_Lyon/responsive-web-design',
+    
+  }
   const resume = 'link to resume file in ?public? file.'
   const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
   // consider turning languagelist into languageobject with {tech: image} pairs
   const techList = ['React', 'Angular', 'MongoDB']
 
-  const websiteLinks = {
-    codePenLink: codePenLink,
-    linkedInLink: linkedInLink,
-    gitHubLink: gitHubLink, 
-    codeCampLink: codeCampLink, 
-    resume: resume
-  }
+  
   
   return (
     <div className="App">
