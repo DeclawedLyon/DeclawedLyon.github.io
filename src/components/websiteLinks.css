@@ -1,18 +1,22 @@
 footer {
   position: fixed;
   color: white;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   left: 0;
   bottom: 0;
   width: fit-content;
 }
 .footer-link {
-  color: white;
+  color: var(--bold-font-color);
 }
 #quick-links {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 1em;
+}
+#quick-links > li {
+  list-style-type: none;
 }
 .fa-codepen {
   border: 10 px solid black;

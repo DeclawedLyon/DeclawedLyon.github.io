@@ -5,6 +5,8 @@
   --font-color: rgb(136, 146, 176);
   --selection: rgb(204, 214, 246);;
   --bold-font-color: rgb(100, 255, 218);
+  --bold-font-color-hovor: rgba(100, 255, 219, 0.651);
+  --bold-font-color-faded: rgba(100, 255, 219, 0.24);
 
   --header-height: 70px;
   --sidebar-width: 50px;
@@ -37,7 +39,7 @@
   margin-right: var(--sidebar-width);
   display: flex;
   flex-direction: column;
-
+  min-height: 100vh;
 }
 
 .content-card {
