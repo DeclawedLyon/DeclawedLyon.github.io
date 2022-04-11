@@ -1,20 +1,29 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 // consider moving styles to css style page
 import SideBar from './components/SideBar';
 // import Logo from './components/Logo';
 import AboutMe from './components/AboutMe';
+import WebsiteLinks from './components/WebsiteLinks';
 
 function App() {
   const codePenLink = 'https://codepen.io/declawedlyon'
-  const linkedInLink = ''
-  const gitHubLink = ''
+  const linkedInLink = 'https://www.linkedin.com/in/declan-lyons-099052223/'
+  const gitHubLink = 'https://github.com/declawedlyon'
+  const codeCampLink = "https://www.freecodecamp.org/Declawed_Lyon"
   const resume = 'link to resume file in ?public? file.'
   const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
   // consider turning languagelist into languageobject with {tech: image} pairs
   const techList = ['React', 'Angular', 'MongoDB']
+
+  const websiteLinks = {
+    codePenLink: codePenLink,
+    linkedInLink: linkedInLink,
+    gitHubLink: gitHubLink, 
+    codeCampLink: codeCampLink, 
+    resume: resume
+  }
+  
   return (
     <div className="App">
       <NavBar />
@@ -121,28 +130,14 @@ Amet cursus sit amet dictum sit amet justo donec enim. Quis viverra nibh cras pu
         </div>
       </div>
 
-      <footer style={{
-        display: 'flex',
-        'justifyContent': 'flex-end',
-        // 'border-width': '10px',
-        // 'borderBlockStyle': 'solid',
-        // 'borderColor': 'green'
-        // justifyContent: 'space-between',
-        // 'flexDirection': 'column'
-      }}>
-        <div id='quick-links'>
-          <a href='#'>
-            {/* <span>github</span> */}
-            <FontAwesomeIcon icon={brands('github-square')} /></a>
-          <a href='#'>
-            {/* <span>linkedIn</span> */}
-            <FontAwesomeIcon icon={brands('linkedin')} /></a>
-          <a href='#'>
-            {/* <span>resume</span> */}
-          <FontAwesomeIcon icon={solid('file-download')} /></a>
-
-        </div>
-      </footer>
+      <WebsiteLinks 
+        codePenLink={codePenLink}
+        linkedInLink={linkedInLink}
+        gitHubLink={gitHubLink} 
+        codeCampLink={codeCampLink} 
+        resume={resume}
+      />
+      
     </div>
   );
 }

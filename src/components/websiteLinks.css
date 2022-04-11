@@ -1,0 +1,19 @@
+footer {
+  position: fixed;
+  color: white;
+  border: 2px solid white;
+  left: 0;
+  bottom: 0;
+  width: fit-content;
+}
+.footer-link {
+  color: white;
+}
+#quick-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fa-codepen {
+  border: 10 px solid black;
+}
