@@ -8,6 +8,12 @@ import AboutMe from './components/AboutMe';
 import WebsiteLinks from './components/WebsiteLinks';
 import SkillCard from './components/SkillCard';
 import QuickNav from './components/sidebars/QuickNav';
+import ProjectCard from './components/ProjectCard';
+
+// ============================
+//            Images
+// ============================
+import bridgePhoto from './images/projects/bridge-dashboard.png'
 
 function App() {
   const codePenLink = 'https://codepen.io/declawedlyon'
@@ -16,19 +22,38 @@ function App() {
   const codeCampLink = "https://www.freecodecamp.org/Declawed_Lyon"
   const codeCampCertificates = {
     responsiveWebDesign: 'https://freecodecamp.org/certification/Declawed_Lyon/responsive-web-design',
-    
   }
   const resume = 'link to resume file in ?public? file.'
   const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
   // consider turning languagelist into languageobject with {tech: image} pairs
   const techList = ['React', 'Angular', 'MongoDB']
+  const myProjects = [
+    {
+      name: 'Bridge',
+      url: 'https://github.com/DeclawedLyon/Bridge-Final-Project',
+      image: bridgePhoto,
+      techStack: ['React', 'PostgreSQL', 'Ruby on Rails']
+    }
+  ]
+
+  let x = 0;
+  let projectArray = [];
+  while(x < 6) {
+    projectArray.push(
+    <ProjectCard 
+      projectName={'test'}
+      projectLink={'https://github.com/DeclawedLyon/Bridge-Final-Project'}
+      projectImage={bridgePhoto}
+    />)
+    x++
+  }
   
   return (
     <div className="App">
       <NavBar />
       {/* <SideBar /> */}
       <QuickNav />
-
+    
       <div id='content-container'>
         <br></br>
       {/* <Logo height={100} width={160}/> */}
@@ -44,6 +69,7 @@ function App() {
         <AboutMe languagesList={languagesList} techList={techList}/>
 
         <div id="skills-field">
+          <SkillCard />
           <div className='content-card'>
             
             <h3>title</h3>
@@ -55,22 +81,15 @@ function App() {
         </div>
 
         <div id='project-field'>
-          <div className='content-card'>
-            {/* <div className='content-card-cover'>
-                <h2>Projects</h2>
-            </div> */}
-            <h3>title</h3>
+            <h3>Projects</h3>
             <hr></hr>
-          link to projects. Include: Bridge. Tweeter(?). (want to build app for Elevation. link to that(?))
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <a href='#'>Bridge</a>
+          <div className='content-card'>
+            {projectArray}
           </div>
         </div>
 
         <div id='contact-me-field'>
-          <div className='content-card'>
+          <div claxssName='content-card'>
             {/* <div className='content-card-cover'>
                 <h2>Contact</h2>
             </div> */}
