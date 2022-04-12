@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.d91f56b1.css",
-    "main.js": "/static/js/main.c76fbe6c.js",
+    "main.css": "/static/css/main.212731b9.css",
+    "main.js": "/static/js/main.eca6db9b.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/20220321_184854.jpg": "/static/media/20220321_184854.d17542195ae84ef55827.jpg",
+    "static/media/bridge-dashboard.png": "/static/media/bridge-dashboard.ef78b44e45dbb82c93ac.png",
     "index.html": "/index.html",
-    "main.d91f56b1.css.map": "/static/css/main.d91f56b1.css.map",
-    "main.c76fbe6c.js.map": "/static/js/main.c76fbe6c.js.map",
+    "main.212731b9.css.map": "/static/css/main.212731b9.css.map",
+    "main.eca6db9b.js.map": "/static/js/main.eca6db9b.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d91f56b1.css",
-    "static/js/main.c76fbe6c.js"
+    "static/css/main.212731b9.css",
+    "static/js/main.eca6db9b.js"
   ]
 }
