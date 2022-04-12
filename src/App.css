@@ -20,16 +20,6 @@
   box-sizing: border-box;
 }
 
-.profile-picture {
-  margin: auto;
-  /* border: 10px solid white; */
-  box-shadow: 0px 0px 30px 5px rgb(181, 189, 201);
-  border-radius: 50%;
-}
-/* Implement card with profile-picture-background class applied */
-.profile-picture-background {
-  background: linear-gradient(35deg, #CCFFFF, #FFCCCC, rgb(204, 204, 255));
-}
 .caution {
   background: repeating-linear-gradient(45deg, yellow 0px, yellow 20px, black 20px, black 40px)
 }
