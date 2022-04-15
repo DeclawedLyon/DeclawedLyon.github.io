@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.212731b9.css",
-    "main.js": "/static/js/main.eca6db9b.js",
+    "main.css": "/static/css/main.e24a1ab0.css",
+    "main.js": "/static/js/main.7743bb86.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/20220321_184854.jpg": "/static/media/20220321_184854.d17542195ae84ef55827.jpg",
+    "static/media/bookWorld_2.png": "/static/media/bookWorld_2.ed00cf90fd994f1c9080.png",
+    "static/media/tweeter.png": "/static/media/tweeter.f68f92815a500be914de.png",
+    "static/media/schedulerImage_2.png": "/static/media/schedulerImage_2.76ec65b5a731a1d174a0.png",
     "static/media/bridge-dashboard.png": "/static/media/bridge-dashboard.ef78b44e45dbb82c93ac.png",
     "index.html": "/index.html",
-    "main.212731b9.css.map": "/static/css/main.212731b9.css.map",
-    "main.eca6db9b.js.map": "/static/js/main.eca6db9b.js.map",
+    "main.e24a1ab0.css.map": "/static/css/main.e24a1ab0.css.map",
+    "main.7743bb86.js.map": "/static/js/main.7743bb86.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.212731b9.css",
-    "static/js/main.eca6db9b.js"
+    "static/css/main.e24a1ab0.css",
+    "static/js/main.7743bb86.js"
   ]
 }
