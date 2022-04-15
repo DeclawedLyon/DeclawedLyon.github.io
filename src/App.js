@@ -10,6 +10,7 @@ import WebsiteLinks from './components/WebsiteLinks';
 import SkillCard from './components/SkillCard';
 import QuickNav from './components/sidebars/QuickNav';
 import ProjectCard from './components/ProjectCard';
+import ContactMe from './components/ContactMe';
 
 // ============================
 //            Images
@@ -71,9 +72,88 @@ function App() {
       techStack: ['Node.js', 'Express', 'Mongo']
     }
   ]
+
+  const skillsArray = [
+    {
+      skill: 'Node.js',
+      logo: '' 
+    },
+    {
+      skill: 'Git',
+      logo: '' 
+    },
+    {
+      skill: 'HTML',
+      logo: '' 
+    },
+    {
+      skill: 'CSS',
+      logo: '' 
+    },
+    {
+      skill: 'JavaScript',
+      logo: '' 
+    },
+    {
+      skill: 'Ruby',
+      logo: '' 
+    },
+    {
+      skill: 'Rails',
+      logo: '' 
+    },
+    {
+      skill: 'C#',
+      logo: '' 
+    },
+    {
+      skill: 'Express.js',
+      logo: '' 
+    },
+    {
+      skill: 'JQuery',
+      logo: '' 
+    },
+    {
+      skill: 'Socket.io',
+      logo: '' 
+    },
+    {
+      skill: 'React.js',
+      logo: '' 
+    },
+    {
+      skill: 'Redux',
+      logo: '' 
+    },
+    {
+      skill: 'Angular',
+      logo: '' 
+    },
+    {
+      skill: 'Twilio',
+      logo: '' 
+    },
+    {
+      skill: 'Netlify',
+      logo: '' 
+    },
+    {
+      skill: 'Material UI',
+      logo: '' 
+    },
+    {
+      skill: 'PostgreSQL',
+      logo: '' 
+    },
+    {
+      skill: 'MongoDB',
+      logo: '' 
+    },
+  ]
   const aboutMeObject = {
     name: 'Declan Lyons',
-    languagesList: ['JavaScript', 'HTML', 'CSS', 'SQL'],
+    // languagesList: ['JavaScript', 'HTML', 'CSS', 'SQL'],
     techList: ['React', 'Angular', 'MongoDB'],
     description: "My name is Declan and I'm a Full Stack Web Developer out of Victoria, B.C. My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible. A graduate of Lighthouse Labs Full Stack Web Development program."
   }
@@ -125,12 +205,19 @@ function App() {
         <AboutMe languagesList={languagesList} techList={techList}/>
 
         <div id="skills-field">
-          <SkillCard />
+          {skillsArray.map(skill => {
+            return (
+              <SkillCard
+                name={skill.skill}
+                logo={skill.logo}
+              />
+            )
+          })}
           <div className='content-card'>
             
             <h3>title</h3>
             <hr></hr>
-          <p>Job experience and work experience. Describe working on a team in Lighthouse</p>
+          <p>Tech Skills</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
@@ -144,23 +231,7 @@ function App() {
           </div>
         </div>
 
-        <div id='contact-me-field'>
-          <div className='content-card'>
-            {/* <div className='content-card-cover'>
-                <h2>Contact</h2>
-            </div> */}
-            <h3>title</h3>
-            <hr></hr>
-            Quick link to automate emailing me.
-            contact and phone information.
-            Location / working hours / contact hours.
-            <br></br>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-          {/* <a href='#'>Link to my current resume</a> */}
-        </div>
+        <ContactMe />
       </div>
 
       <WebsiteLinks 
