@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import './App.css';
 // ============================
 //          Components
@@ -76,112 +76,118 @@ function App() {
   const skillsArray = [
     {
       skill: 'Node.js',
-      logo: '' 
+      // logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg'
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/d8c8025b1695a3f14f849b99afc71d917ef40813-480x480.png' 
     },
     {
       skill: 'Git',
-      logo: '' 
+      // logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Git-logo-black.svg' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Git_format.png' 
     },
     {
       skill: 'HTML',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg' 
     },
     {
       skill: 'CSS',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' 
+    },
+    {
+      skill: 'SASS',
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/2825d163301127c72b6121baebb5e570689596e5-480x480.png'
     },
     {
       skill: 'JavaScript',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Javascript_on_figma.png' 
     },
     {
       skill: 'Ruby',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg' 
     },
     {
       skill: 'Rails',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg' 
     },
-    {
-      skill: 'C#',
-      logo: '' 
-    },
+    // {
+    //   skill: 'C#',
+    //   logo: 'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)#/media/File:C_Sharp_wordmark.svg' 
+    // },
     {
       skill: 'Express.js',
-      logo: '' 
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/fd636cb44ce8d52b8a70c399cec0bab2c51b39f4-1024x1024.png' 
     },
     {
       skill: 'JQuery',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/8/81/JQuery_logo_text.svg' 
     },
     {
       skill: 'Socket.io',
-      logo: '' 
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/c0941751c096119d67259c2b549f5a90e8c086dd-512x512.png' 
     },
     {
       skill: 'React.js',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' 
     },
     {
       skill: 'Redux',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png' 
     },
     {
       skill: 'Angular',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg' 
     },
     {
       skill: 'Twilio',
-      logo: '' 
+      // logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Cib-twilio_%28CoreUI_Icons_v1.0.0%29.svg' 
     },
     {
       skill: 'Netlify',
-      logo: '' 
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/a585504e30bdadca447b3302af097fa769d6eb48-2400x2400.png' 
+      // logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg' 
     },
     {
       skill: 'Material UI',
-      logo: '' 
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/5b6e5467f6d7136061937b59d6ec3639f775e61b-820x820.png' 
     },
     {
       skill: 'PostgreSQL',
-      logo: '' 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg' 
     },
     {
       skill: 'MongoDB',
-      logo: '' 
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/72eb74dae2b1a60c597435c1c3b0b4a7f087886b-650x650.png' 
     },
   ]
   const aboutMeObject = {
     name: 'Declan Lyons',
-    // languagesList: ['JavaScript', 'HTML', 'CSS', 'SQL'],
-    techList: ['React', 'Angular', 'MongoDB'],
     description: "My name is Declan and I'm a Full Stack Web Developer out of Victoria, B.C. My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible. A graduate of Lighthouse Labs Full Stack Web Development program."
   }
   // ==========================
   //      State Variables
   // ==========================
-  const [projectElementArray, setProjectElementArray] = useState([])
+  // const [projectElementArray, setProjectElementArray] = useState([])
 
-  const formatProjectArray = (arr) => {
-    let projectArray = arr.map(element => {
-      console.log('element--', element.projectName);
-      return (
-        <ProjectCard 
-          projectName={element.projectName}
-          projectLink={element.projectLink}
-          projectImage={element.projectImage}
-          projectDescription={element.projectDescription}
-          techStack={element.techStack}
-        />
-      )
-    });
-    console.log(projectArray)
-    setProjectElementArray(projectArray)
-  }
+  // const formatProjectArray = (arr) => {
+  //   let projectArray = arr.map(element => {
+  //     console.log('element--', element.projectName);
+  //     return (
+  //       <ProjectCard 
+  //         projectName={element.projectName}
+  //         projectLink={element.projectLink}
+  //         projectImage={element.projectImage}
+  //         projectDescription={element.projectDescription}
+  //         techStack={element.techStack}
+  //       />
+  //     )
+  //   });
+  //   console.log(projectArray)
+  //   setProjectElementArray(projectArray)
+  // }
 
-  useEffect(() => {
-    formatProjectArray(projectsArray)
-  }, [])
+  // useEffect(() => {
+  //   formatProjectArray(projectsArray)
+  // }, [])
 
   
   return (
@@ -205,21 +211,19 @@ function App() {
         <AboutMe languagesList={languagesList} techList={techList}/>
 
         <div id="skills-field">
-          {skillsArray.map(skill => {
-            return (
-              <SkillCard
-                name={skill.skill}
-                logo={skill.logo}
-              />
-            )
-          })}
           <div className='content-card'>
-            
-            <h3>title</h3>
+            <h3>Tech Skills</h3>
             <hr></hr>
-          <p>Tech Skills</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <div id='skills-container'>
+              {skillsArray.map(skill => {
+                return (
+                  <SkillCard
+                    name={skill.skill}
+                    logo={skill.logo}
+                  />
+                )
+              })}
+            </div>
           </div>
         </div>
 
@@ -227,7 +231,19 @@ function App() {
             <h3>Projects</h3>
             <hr></hr>
           <div className='content-card'>
-            {projectElementArray}
+            {/* {projectElementArray} */}
+            {projectsArray.map(element => {
+              // console.log('element--', element.projectName);
+              return (
+                <ProjectCard 
+                  projectName={element.projectName}
+                  projectLink={element.projectLink}
+                  projectImage={element.projectImage}
+                  projectDescription={element.projectDescription}
+                  techStack={element.techStack}
+                />
+              )
+            })}
           </div>
         </div>
 
