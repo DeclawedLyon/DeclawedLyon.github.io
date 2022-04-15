@@ -28,14 +28,25 @@ function App() {
   // consider turning languagelist into languageobject with {tech: image} pairs
   const techList = ['React', 'Angular', 'MongoDB']
 
+  const projectsArray = [
+    {
+      projectName: 'Bridge',
+      projectLink: 'https://github.com/DeclawedLyon/Bridge-Final-Project',
+      projectImage: bridgePhoto,
+      projectDescription: 'Bridge is a shipping logistics utility application. It helps businesses or people with intensive shipping requirements keep all of their information in one place. This makes supply chain management easier and more manageable for the user.'
+    },
+
+  ]
+
   let x = 0;
   let projectArray = [];
   while(x < 6) {
     projectArray.push(
     <ProjectCard 
-      projectName={'test'}
-      projectLink={'#'}
-      projectImage={bridgePhoto}
+      projectName={projectsArray[0].projectName}
+      projectLink={projectsArray[0].projectLink}
+      projectImage={projectsArray[0].projectImage}
+      description={projectsArray[0].description}
     />)
     x++
   }
