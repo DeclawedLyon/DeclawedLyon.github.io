@@ -1,12 +1,25 @@
 #skills-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2em 2em;
+  padding: 2em;
 }
 .skill-card {
-  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--skill-card-border);
+  border-radius: 50%;
+  padding: 1em;
   /* width: 250px;
   height: 250px; */
 }
 .skill-logo {
-  width: 50px;
+  /* min-width: 75px;
+  max-width: 75px;
+  min-width: 75px;
+  min-height: 75px; */
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
 }

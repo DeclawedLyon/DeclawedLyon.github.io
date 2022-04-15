@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 import profilePicture from '../images/20220321_184854.jpg'
+import './about-me.css'
 
 export default function AboutMe(props) {
   // console.log(props)
