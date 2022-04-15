@@ -3,7 +3,7 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import profilePicture from '../images/20220321_184854.jpg'
 
 export default function AboutMe(props) {
-  console.log(props)
+  // console.log(props)
 
   return (
     <div id="about-me-field">

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 // ============================
 //          Components
@@ -14,8 +15,14 @@ import ProjectCard from './components/ProjectCard';
 //            Images
 // ============================
 import bridgePhoto from './images/projects/bridge-dashboard.png'
+import bookWorldPhoto from './images/projects/bookWorld_2.png'
+import tweeterPhoto from './images/projects/tweeter.png'
+import schedulerPhoto from './images/projects/schedulerImage_2.png'
 
 function App() {
+  // ==========================
+  //       App Variables
+  // ==========================
   const codePenLink = 'https://codepen.io/declawedlyon'
   const linkedInLink = 'https://www.linkedin.com/in/declan-lyons-099052223/'
   const gitHubLink = 'https://github.com/declawedlyon'
@@ -27,31 +34,75 @@ function App() {
   const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
   // consider turning languagelist into languageobject with {tech: image} pairs
   const techList = ['React', 'Angular', 'MongoDB']
-
   const projectsArray = [
     {
       projectName: 'Bridge',
       projectLink: 'https://github.com/DeclawedLyon/Bridge-Final-Project',
       projectImage: bridgePhoto,
       projectDescription: 'Bridge is a shipping logistics utility application. It helps businesses or people with intensive shipping requirements keep all of their information in one place. This makes supply chain management easier and more manageable for the user.',
-      techStack: ['React', 'PostgreSQL', 'Ruby on Rails']
+      techStack: ['Node,js', 'React', 'PostgreSQL', 'Ruby on Rails']
     },
-
+    {
+      projectName: 'Book World',
+      projectLink: 'https://github.com/DeclawedLyon/midterm_store',
+      projectImage: bookWorldPhoto,
+      projectDescription: 'Book World is a buy-and-sell app built with Node.js, Express and PostgreSQL. The app features a homepage, a favorites page, a shopping cart as well as the ability to message sellers. Users can favourite items to come back to later and can use the search feature to find specific items and filter them by price. Users have a converstations page where they can access their messages with buyers, and can mark items as sold.',
+      techStack: ['Node.js', 'Express', 'PostgreSQL']
+    },
+    {
+      projectName: 'SPW Stock Display',
+      projectLink: 'https://github.com/DeclawedLyon/Store_Display',
+      projectImage: bridgePhoto,
+      projectDescription: 'Product display app for front of store staff use.',
+      techStack: []
+    },
+    {
+      projectName: 'Scheduler',
+      projectLink: 'https://github.com/DeclawedLyon/Scheduler',
+      projectImage: schedulerPhoto,
+      projectDescription: 'A demo React Application designed to help schedule interviews between students and teachers.',
+      techStack: []
+    },
+    {
+      projectName: 'Tweeter',
+      projectLink: 'https://github.com/DeclawedLyon/tweeter',
+      projectImage: tweeterPhoto,
+      projectDescription: 'Tweeter is a simple, single-page Twitter clone.',
+      techStack: ['Node.js', 'Express', 'Mongo']
+    }
   ]
-
-  let x = 0;
-  let projectArray = [];
-  while(x < 6) {
-    projectArray.push(
-    <ProjectCard 
-      projectName={projectsArray[0].projectName}
-      projectLink={projectsArray[0].projectLink}
-      projectImage={projectsArray[0].projectImage}
-      projectDescription={projectsArray[0].projectDescription}
-      techStack={projectsArray[0].techStack}
-    />)
-    x++
+  const aboutMeObject = {
+    name: 'Declan Lyons',
+    languagesList: ['JavaScript', 'HTML', 'CSS', 'SQL'],
+    techList: ['React', 'Angular', 'MongoDB'],
+    description: "My name is Declan and I'm a Full Stack Web Developer out of Victoria, B.C. My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible. A graduate of Lighthouse Labs Full Stack Web Development program."
   }
+  // ==========================
+  //      State Variables
+  // ==========================
+  const [projectElementArray, setProjectElementArray] = useState([])
+
+  const formatProjectArray = (arr) => {
+    let projectArray = arr.map(element => {
+      console.log('element--', element.projectName);
+      return (
+        <ProjectCard 
+          projectName={element.projectName}
+          projectLink={element.projectLink}
+          projectImage={element.projectImage}
+          projectDescription={element.projectDescription}
+          techStack={element.techStack}
+        />
+      )
+    });
+    console.log(projectArray)
+    setProjectElementArray(projectArray)
+  }
+
+  useEffect(() => {
+    formatProjectArray(projectsArray)
+  }, [])
+
   
   return (
     <div className="App">
@@ -89,12 +140,12 @@ function App() {
             <h3>Projects</h3>
             <hr></hr>
           <div className='content-card'>
-            {projectArray}
+            {projectElementArray}
           </div>
         </div>
 
         <div id='contact-me-field'>
-          <div claxssName='content-card'>
+          <div className='content-card'>
             {/* <div className='content-card-cover'>
                 <h2>Contact</h2>
             </div> */}
