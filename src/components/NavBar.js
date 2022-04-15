@@ -24,7 +24,7 @@ export default function NavBar(props) {
       <a href="#" className="nav-item">Projects</a>
       <a href="#" className="nav-item">Tech Skills</a>
       <a href="#" className="nav-item">Contact Me</a>
-      <button className='menu-icon-btn'>
+      <button className='menu-icon-btn' style={{opacity: '0%'}}>
         <FontAwesomeIcon icon={solid('bars')} className="menu-icon" onClick={() => changeMenuState()}/>
       </button>
 

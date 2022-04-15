@@ -10,7 +10,8 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import NavBar from './components/NavBar';
 import AboutMe from './components/AboutMe';
 import WebsiteLinks from './components/WebsiteLinks';
-import SkillCard from './components/SkillCard';
+import SkillCard from './components/skills/SkillCard';
+import Skills from './components/skills/Skills';
 import QuickNav from './components/sidebars/QuickNav';
 import ProjectCard from './components/ProjectCard';
 import ContactMe from './components/ContactMe';
@@ -214,7 +215,6 @@ function App() {
       <div id='content-container'>
 
         <h1 id="welcome-title">Welcome!</h1>
-
         <img className='profile-picture' src={profilePicture} alt='profile picture' id='profile-picture' width={300} height={300}></img>
 
         <AboutMe info={aboutMeObject} languagesList={languagesList} techList={techList}/>
@@ -240,24 +240,7 @@ function App() {
           </div>
         </div>
 
-        <div id="skills-field">
-          <div className='content-card'>
-            <h3>Tech Skills</h3>
-            <hr></hr>
-            <div id='skills-container'>
-              {skillsArray.map((skill, x) => {
-                return (
-                  <SkillCard
-                    key={`${x}-${skill.skill}`}
-                    name={skill.skill}
-                    logo={skill.logo}
-                  />
-                )
-              })}
-            </div>
-          </div>
-        </div>
-
+        <Skills skillArray={skillsArray} />
         <ContactMe />
       </div>
 

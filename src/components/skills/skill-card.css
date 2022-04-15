@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2em 2em;
   padding: 2em;
+  padding-left: 4em;
 }
 .skill-card {
   display: flex;

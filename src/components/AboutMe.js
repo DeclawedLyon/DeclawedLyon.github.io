@@ -7,15 +7,10 @@ export default function AboutMe(props) {
 
   return (
     <div id="about-me-field">
-      
       <div className='content-card'>
         <h3>About Me</h3> 
         <hr></hr>
-        {/* <ul>
-          <li>list of skills and languages</li>
-          <li>list of languages and skills</li>
-        </ul> */}
-      <p>{props.info.description}</p>
+        <p>{props.info.description}</p>
       </div>
     </div>
   )

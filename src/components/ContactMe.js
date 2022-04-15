@@ -12,7 +12,7 @@ export default function ContactMe(props) {
       <form id="contact-me-form">
         <input id="user-name" type={'text'} placeholder='Enter your name' required></input>
         <input id="email-address" type={'email'} placeholder='Enter your email address' required></input>
-        <input id="email-message" type={'text'} placeholder='Enter your message...' required></input>
+        <textarea id="email-message" type={'text'} placeholder='Enter your message...' required></textarea>
         <button id="enter-button" type={'submit'} onClick={(e) => {
           e.preventDefault() 
           console.log(e)
