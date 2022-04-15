@@ -5,7 +5,7 @@ import profilePicture from '../images/20220321_184854.jpg'
 import './about-me.css'
 
 export default function AboutMe(props) {
-  console.log(props)
+  // console.log(props)
 
   return (
     <div id="about-me-field">

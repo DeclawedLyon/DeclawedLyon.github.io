@@ -1,8 +1,8 @@
 export default function SkillCard(props) {
-  console.log(props)
   return (
     <>
-      <p>"HI :]"</p>
+      <img src={props.logo} alt="skill logo"></img>
+      <h1>{props.name}</h1>
     </>
   )
 }
