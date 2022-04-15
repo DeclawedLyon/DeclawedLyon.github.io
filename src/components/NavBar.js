@@ -19,10 +19,11 @@ export default function NavBar(props) {
     <nav id="nav-bar">
       {/* These links will either be links to pages OR links to page locations */}
       <Logo height={60} />
-      <a href="#" className="nav-item">About</a>
-      <a href="#" className="nav-item">Experience</a>
+      <a href="#welcome-title" className="nav-item">Home</a>
+      <a href="#about-me-field" className="nav-item">About Me</a>
       <a href="#" className="nav-item">Projects</a>
-      <a href="#" className="nav-item">Contact</a>
+      <a href="#" className="nav-item">Tech Skills</a>
+      <a href="#" className="nav-item">Contact Me</a>
       <button className='menu-icon-btn'>
         <FontAwesomeIcon icon={solid('bars')} className="menu-icon" onClick={() => changeMenuState()}/>
       </button>

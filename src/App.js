@@ -1,10 +1,13 @@
 // import { useEffect, useState } from 'react';
 import './App.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 // ============================
 //          Components
 // ============================
+// import SideBar from './components/sidebars/SideBar';
 import NavBar from './components/NavBar';
-import SideBar from './components/sidebars/SideBar';
 import AboutMe from './components/AboutMe';
 import WebsiteLinks from './components/WebsiteLinks';
 import SkillCard from './components/SkillCard';
@@ -15,10 +18,12 @@ import ContactMe from './components/ContactMe';
 // ============================
 //            Images
 // ============================
+import profilePicture from './images/20220321_184854.jpg'
 import bridgePhoto from './images/projects/bridge-dashboard.png'
 import bookWorldPhoto from './images/projects/bookWorld_2.png'
 import tweeterPhoto from './images/projects/tweeter.png'
 import schedulerPhoto from './images/projects/schedulerImage_2.png'
+import jqueryLogo from './images/skills/jquery_logo_icon_167804.png'
 
 function App() {
   // ==========================
@@ -85,6 +90,10 @@ function App() {
       logo: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Git_format.png' 
     },
     {
+      skill: 'JavaScript',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Javascript_on_figma.png' 
+    },
+    {
       skill: 'HTML',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg' 
     },
@@ -95,10 +104,6 @@ function App() {
     {
       skill: 'SASS',
       logo: 'https://cdn.sanity.io/images/yl4vxloa/production/2825d163301127c72b6121baebb5e570689596e5-480x480.png'
-    },
-    {
-      skill: 'JavaScript',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Javascript_on_figma.png' 
     },
     {
       skill: 'Ruby',
@@ -113,16 +118,8 @@ function App() {
     //   logo: 'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)#/media/File:C_Sharp_wordmark.svg' 
     // },
     {
-      skill: 'Express.js',
-      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/fd636cb44ce8d52b8a70c399cec0bab2c51b39f4-1024x1024.png' 
-    },
-    {
-      skill: 'JQuery',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/8/81/JQuery_logo_text.svg' 
-    },
-    {
-      skill: 'Socket.io',
-      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/c0941751c096119d67259c2b549f5a90e8c086dd-512x512.png' 
+      skill: 'Angular',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg' 
     },
     {
       skill: 'React.js',
@@ -133,8 +130,21 @@ function App() {
       logo: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png' 
     },
     {
-      skill: 'Angular',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg' 
+      skill: 'Material UI',
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/5b6e5467f6d7136061937b59d6ec3639f775e61b-820x820.png' 
+    },
+    {
+      skill: 'Express.js',
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/fd636cb44ce8d52b8a70c399cec0bab2c51b39f4-1024x1024.png' 
+    },
+    {
+      skill: 'JQuery',
+      // logo: 'https://upload.wikimedia.org/wikipedia/commons/8/81/JQuery_logo_text.svg' 
+      logo: jqueryLogo 
+    },
+    {
+      skill: 'Socket.io',
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/c0941751c096119d67259c2b549f5a90e8c086dd-512x512.png' 
     },
     {
       skill: 'Twilio',
@@ -147,10 +157,6 @@ function App() {
       // logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg' 
     },
     {
-      skill: 'Material UI',
-      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/5b6e5467f6d7136061937b59d6ec3639f775e61b-820x820.png' 
-    },
-    {
       skill: 'PostgreSQL',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg' 
     },
@@ -161,7 +167,17 @@ function App() {
   ]
   const aboutMeObject = {
     name: 'Declan Lyons',
-    description: "My name is Declan and I'm a Full Stack Web Developer out of Victoria, B.C. My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible. A graduate of Lighthouse Labs Full Stack Web Development program."
+    description: "My name is Declan. I'm a Full Stack Web Developer out of Victoria, B.C. with a goal-driven creative mindset and passion for learning and innovating. My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible.  I am a graduate of Lighthouse Labs' Full Stack Web Development program."
+  }
+  const fontAwesomeIcons = {
+    sms: <FontAwesomeIcon icon={solid('comment-sms')} />,
+    fire: <FontAwesomeIcon icon={solid('fire')} />,
+    gitHub: <FontAwesomeIcon icon={brands('github-square')} />,
+    linkedIn: <FontAwesomeIcon className="footer-link" icon={brands('linkedin')} />,
+    codePen: <FontAwesomeIcon className="footer-link" icon={brands('codepen')} />,
+    codeCamp: <FontAwesomeIcon className="footer-link" icon={brands('free-code-camp')} />,
+    fileDownload: <FontAwesomeIcon className="footer-link" icon={solid('file-download')} />,
+
   }
   // ==========================
   //      State Variables
@@ -193,49 +209,26 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <SideBar /> */}
       <QuickNav />
     
       <div id='content-container'>
-        <br></br>
-      {/* <Logo height={100} width={160}/> */}
-      {/* <fieldset>
-        <legend>Hello world</legend>
-        <input type={'radio'} id={'test-1'} name={'test-buttons'} value={'button-1'}></input>
-        <label for='test-1'>Test button 1</label>
-        <input type={'radio'} id={'test-2'} name={'test-buttons'} value={'button-2'}></input>
-        <label for='test-2'>Test button 2</label>
-      </fieldset> */}
 
+        <h1 id="welcome-title">Welcome!</h1>
 
-        <AboutMe languagesList={languagesList} techList={techList}/>
+        <img className='profile-picture' src={profilePicture} alt='profile picture' id='profile-picture' width={300} height={300}></img>
 
-        <div id="skills-field">
-          <div className='content-card'>
-            <h3>Tech Skills</h3>
-            <hr></hr>
-            <div id='skills-container'>
-              {skillsArray.map(skill => {
-                return (
-                  <SkillCard
-                    name={skill.skill}
-                    logo={skill.logo}
-                  />
-                )
-              })}
-            </div>
-          </div>
-        </div>
+        <AboutMe info={aboutMeObject} languagesList={languagesList} techList={techList}/>
 
         <div id='project-field'>
             <h3>Projects</h3>
             <hr></hr>
           <div className='content-card'>
             {/* {projectElementArray} */}
-            {projectsArray.map(element => {
+            {projectsArray.map((element, x) => {
               // console.log('element--', element.projectName);
               return (
                 <ProjectCard 
+                  key={`${x}-${element.projectName}`}
                   projectName={element.projectName}
                   projectLink={element.projectLink}
                   projectImage={element.projectImage}
@@ -244,6 +237,24 @@ function App() {
                 />
               )
             })}
+          </div>
+        </div>
+
+        <div id="skills-field">
+          <div className='content-card'>
+            <h3>Tech Skills</h3>
+            <hr></hr>
+            <div id='skills-container'>
+              {skillsArray.map((skill, x) => {
+                return (
+                  <SkillCard
+                    key={`${x}-${skill.skill}`}
+                    name={skill.skill}
+                    logo={skill.logo}
+                  />
+                )
+              })}
+            </div>
           </div>
         </div>
 
@@ -256,8 +267,8 @@ function App() {
         gitHubLink={gitHubLink} 
         codeCampLink={codeCampLink} 
         resume={resume}
-      />
-      
+        icons={[]}
+      /> 
     </div>
   );
 }
