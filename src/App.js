@@ -1,20 +1,16 @@
-// import { useEffect, useState } from 'react';
-import './App.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import './App.css';
 // ============================
 //          Components
 // ============================
 // import SideBar from './components/sidebars/SideBar';
-import NavBar from './components/NavBar';
-import AboutMe from './components/AboutMe';
-import WebsiteLinks from './components/WebsiteLinks';
-import SkillCard from './components/skills/SkillCard';
+import NavBar from './components/nav_elements/NavBar';
+import AboutMe from './components/about_me/AboutMe';
+import WebsiteLinks from './components/footer_components/WebsiteLinks';
 import Skills from './components/skills/Skills';
-import QuickNav from './components/sidebars/QuickNav';
-import ProjectCard from './components/ProjectCard';
-import ContactMe from './components/ContactMe';
+import QuickNav from './components/nav_elements/sidebars/QuickNav';
+import ContactMe from './components/contact_me/ContactMe';
 
 // ============================
 //            Images
@@ -25,6 +21,7 @@ import bookWorldPhoto from './images/projects/bookWorld_2.png'
 import tweeterPhoto from './images/projects/tweeter.png'
 import schedulerPhoto from './images/projects/schedulerImage_2.png'
 import jqueryLogo from './images/skills/jquery_logo_icon_167804.png'
+import Projects from './components/projects/Projects';
 
 function App() {
   // ==========================
@@ -38,9 +35,8 @@ function App() {
     responsiveWebDesign: 'https://freecodecamp.org/certification/Declawed_Lyon/responsive-web-design',
   }
   const resume = 'link to resume file in ?public? file.'
-  const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
-  // consider turning languagelist into languageobject with {tech: image} pairs
-  const techList = ['React', 'Angular', 'MongoDB']
+  // const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
+  // const techList = ['React', 'Angular', 'MongoDB']
   const projectsArray = [
     {
       projectName: 'Bridge',
@@ -174,74 +170,26 @@ function App() {
     sms: <FontAwesomeIcon icon={solid('comment-sms')} />,
     fire: <FontAwesomeIcon icon={solid('fire')} />,
     gitHub: <FontAwesomeIcon icon={brands('github-square')} />,
-    linkedIn: <FontAwesomeIcon className="footer-link" icon={brands('linkedin')} />,
-    codePen: <FontAwesomeIcon className="footer-link" icon={brands('codepen')} />,
-    codeCamp: <FontAwesomeIcon className="footer-link" icon={brands('free-code-camp')} />,
+    linkedIn: <FontAwesomeIcon icon={brands('linkedin')} />,
+    codePen: <FontAwesomeIcon icon={brands('codepen')} />,
+    codeCamp: <FontAwesomeIcon icon={brands('free-code-camp')} />,
     fileDownload: <FontAwesomeIcon className="footer-link" icon={solid('file-download')} />,
-
+    email: <FontAwesomeIcon icon={solid('envelope')} />
   }
-  // ==========================
-  //      State Variables
-  // ==========================
-  // const [projectElementArray, setProjectElementArray] = useState([])
 
-  // const formatProjectArray = (arr) => {
-  //   let projectArray = arr.map(element => {
-  //     console.log('element--', element.projectName);
-  //     return (
-  //       <ProjectCard 
-  //         projectName={element.projectName}
-  //         projectLink={element.projectLink}
-  //         projectImage={element.projectImage}
-  //         projectDescription={element.projectDescription}
-  //         techStack={element.techStack}
-  //       />
-  //     )
-  //   });
-  //   console.log(projectArray)
-  //   setProjectElementArray(projectArray)
-  // }
-
-  // useEffect(() => {
-  //   formatProjectArray(projectsArray)
-  // }, [])
-
-  
   return (
     <div className="App">
       <NavBar />
       <QuickNav />
     
       <div id='content-container'>
-
         <h1 id="welcome-title">Welcome!</h1>
         <img className='profile-picture' src={profilePicture} alt='profile picture' id='profile-picture' width={300} height={300}></img>
 
-        <AboutMe info={aboutMeObject} languagesList={languagesList} techList={techList}/>
-
-        <div id='project-field'>
-            <h3>Projects</h3>
-            <hr></hr>
-          <div className='content-card'>
-            {/* {projectElementArray} */}
-            {projectsArray.map((element, x) => {
-              // console.log('element--', element.projectName);
-              return (
-                <ProjectCard 
-                  key={`${x}-${element.projectName}`}
-                  projectName={element.projectName}
-                  projectLink={element.projectLink}
-                  projectImage={element.projectImage}
-                  projectDescription={element.projectDescription}
-                  techStack={element.techStack}
-                />
-              )
-            })}
-          </div>
-        </div>
-
+        <AboutMe info={aboutMeObject}/>
+        <Projects projectArray={projectsArray}/>
         <Skills skillArray={skillsArray} />
-        <ContactMe />
+        <ContactMe icons={[fontAwesomeIcons.sms, fontAwesomeIcons.linkedIn, fontAwesomeIcons.email]} />
       </div>
 
       <WebsiteLinks 
@@ -250,7 +198,7 @@ function App() {
         gitHubLink={gitHubLink} 
         codeCampLink={codeCampLink} 
         resume={resume}
-        icons={[]}
+        // icons={[]}
       /> 
     </div>
   );

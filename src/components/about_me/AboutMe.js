@@ -1,10 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 import './about-me.css'
 
 export default function AboutMe(props) {
-  // console.log(props.info)
-
   return (
     <div id="about-me-field">
       <div className='content-card'>

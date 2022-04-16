@@ -5,11 +5,26 @@
   border: 10px solid pink;
   min-height: 40vh;
 }
+.contact-button {
+  font-size: 2em;
+  aspect-ratio: 1;
+  width: 2em;
+  margin-inline: 0.25em;
+  padding: 0.25em;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
 #contact-me-form {
   display: flex;
   flex-direction: column;
   width: 40vw;
   align-items: center;
+}
+#user-name {
+  width: 100%;
+}
+#email-address {
+  width: 100%;
 }
 #email-message {
   width: 100%;
