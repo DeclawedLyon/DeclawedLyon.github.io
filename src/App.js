@@ -1,24 +1,29 @@
-// import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 import './App.css';
 // ============================
 //          Components
 // ============================
-import NavBar from './components/NavBar';
-import SideBar from './components/sidebars/SideBar';
-import AboutMe from './components/AboutMe';
-import WebsiteLinks from './components/WebsiteLinks';
-import SkillCard from './components/SkillCard';
-import QuickNav from './components/sidebars/QuickNav';
-import ProjectCard from './components/ProjectCard';
-import ContactMe from './components/ContactMe';
+// import SideBar from './components/sidebars/SideBar';
+import NavBar from './components/nav_elements/NavBar';
+import AboutMe from './components/about_me/AboutMe';
+import WebsiteLinks from './components/footer_components/WebsiteLinks';
+import Skills from './components/skills/Skills';
+import QuickNav from './components/nav_elements/sidebars/QuickNav';
+import ContactMe from './components/contact_me/ContactMe';
+import Projects from './components/projects/Projects';
 
 // ============================
 //            Images
 // ============================
+import profilePicture from './images/20220321_184854.jpg'
 import bridgePhoto from './images/projects/bridge-dashboard.png'
 import bookWorldPhoto from './images/projects/bookWorld_2.png'
 import tweeterPhoto from './images/projects/tweeter.png'
 import schedulerPhoto from './images/projects/schedulerImage_2.png'
+import jqueryLogo from './images/skills/jquery_logo_icon_167804.png'
+import resumePDF from './images/DeclanLyonsResume.pdf'
+import spwImage from './images/projects/SPWStore.png'
 
 function App() {
   // ==========================
@@ -31,45 +36,49 @@ function App() {
   const codeCampCertificates = {
     responsiveWebDesign: 'https://freecodecamp.org/certification/Declawed_Lyon/responsive-web-design',
   }
-  const resume = 'link to resume file in ?public? file.'
-  const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
-  // consider turning languagelist into languageobject with {tech: image} pairs
-  const techList = ['React', 'Angular', 'MongoDB']
+  // const resume = 'link to resume file in ?public? file.'
+  // const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
+  // const techList = ['React', 'Angular', 'MongoDB']
   const projectsArray = [
     {
       projectName: 'Bridge',
       projectLink: 'https://github.com/DeclawedLyon/Bridge-Final-Project',
       projectImage: bridgePhoto,
       projectDescription: 'Bridge is a shipping logistics utility application. It helps businesses or people with intensive shipping requirements keep all of their information in one place. This makes supply chain management easier and more manageable for the user.',
-      techStack: ['Node,js', 'React', 'PostgreSQL', 'Ruby on Rails']
+      techStack: ['Node,js', 'React', 'PostgreSQL', 'Ruby on Rails'],
+      development: false
     },
     {
       projectName: 'Book World',
       projectLink: 'https://github.com/DeclawedLyon/midterm_store',
       projectImage: bookWorldPhoto,
       projectDescription: 'Book World is a buy-and-sell app built with Node.js, Express and PostgreSQL. The app features a homepage, a favorites page, a shopping cart as well as the ability to message sellers. Users can favourite items to come back to later and can use the search feature to find specific items and filter them by price. Users have a converstations page where they can access their messages with buyers, and can mark items as sold.',
-      techStack: ['Node.js', 'Express', 'PostgreSQL']
+      techStack: ['Node.js', 'Express', 'PostgreSQL'],
+      development: false
     },
     {
       projectName: 'SPW Stock Display',
       projectLink: 'https://github.com/DeclawedLyon/Store_Display',
-      projectImage: bridgePhoto,
+      projectImage: spwImage,
       projectDescription: 'Product display app for front of store staff use.',
-      techStack: []
+      techStack: [],
+      development: true
     },
     {
       projectName: 'Scheduler',
       projectLink: 'https://github.com/DeclawedLyon/Scheduler',
       projectImage: schedulerPhoto,
       projectDescription: 'A demo React Application designed to help schedule interviews between students and teachers.',
-      techStack: []
+      techStack: [],
+      development: false
     },
     {
       projectName: 'Tweeter',
       projectLink: 'https://github.com/DeclawedLyon/tweeter',
       projectImage: tweeterPhoto,
       projectDescription: 'Tweeter is a simple, single-page Twitter clone.',
-      techStack: ['Node.js', 'Express', 'Mongo']
+      techStack: ['Node.js', 'Express', 'Mongo'],
+      development: false
     }
   ]
 
@@ -85,6 +94,10 @@ function App() {
       logo: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Git_format.png' 
     },
     {
+      skill: 'JavaScript',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Javascript_on_figma.png' 
+    },
+    {
       skill: 'HTML',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg' 
     },
@@ -95,10 +108,6 @@ function App() {
     {
       skill: 'SASS',
       logo: 'https://cdn.sanity.io/images/yl4vxloa/production/2825d163301127c72b6121baebb5e570689596e5-480x480.png'
-    },
-    {
-      skill: 'JavaScript',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Javascript_on_figma.png' 
     },
     {
       skill: 'Ruby',
@@ -113,16 +122,8 @@ function App() {
     //   logo: 'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)#/media/File:C_Sharp_wordmark.svg' 
     // },
     {
-      skill: 'Express.js',
-      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/fd636cb44ce8d52b8a70c399cec0bab2c51b39f4-1024x1024.png' 
-    },
-    {
-      skill: 'JQuery',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/8/81/JQuery_logo_text.svg' 
-    },
-    {
-      skill: 'Socket.io',
-      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/c0941751c096119d67259c2b549f5a90e8c086dd-512x512.png' 
+      skill: 'Angular',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg' 
     },
     {
       skill: 'React.js',
@@ -133,8 +134,21 @@ function App() {
       logo: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png' 
     },
     {
-      skill: 'Angular',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg' 
+      skill: 'Material UI',
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/5b6e5467f6d7136061937b59d6ec3639f775e61b-820x820.png' 
+    },
+    {
+      skill: 'Express.js',
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/fd636cb44ce8d52b8a70c399cec0bab2c51b39f4-1024x1024.png' 
+    },
+    {
+      skill: 'JQuery',
+      // logo: 'https://upload.wikimedia.org/wikipedia/commons/8/81/JQuery_logo_text.svg' 
+      logo: jqueryLogo 
+    },
+    {
+      skill: 'Socket.io',
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/c0941751c096119d67259c2b549f5a90e8c086dd-512x512.png' 
     },
     {
       skill: 'Twilio',
@@ -147,10 +161,6 @@ function App() {
       // logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg' 
     },
     {
-      skill: 'Material UI',
-      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/5b6e5467f6d7136061937b59d6ec3639f775e61b-820x820.png' 
-    },
-    {
       skill: 'PostgreSQL',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg' 
     },
@@ -161,93 +171,34 @@ function App() {
   ]
   const aboutMeObject = {
     name: 'Declan Lyons',
-    description: "My name is Declan and I'm a Full Stack Web Developer out of Victoria, B.C. My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible. A graduate of Lighthouse Labs Full Stack Web Development program."
+    description: "My name is Declan. I'm a Full Stack Web Developer out of Victoria, B.C. I am recent a graduate of Lighthouse Labs' Full Stack Web Development program with a goal-driven creative mindset and passion for learning and innovating! My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible."
   }
-  // ==========================
-  //      State Variables
-  // ==========================
-  // const [projectElementArray, setProjectElementArray] = useState([])
+  const fontAwesomeIcons = {
+    sms: <FontAwesomeIcon icon={solid('comment-sms')} />,
+    fire: <FontAwesomeIcon icon={solid('fire')} />,
+    gitHub: <FontAwesomeIcon icon={brands('github-square')} />,
+    linkedIn: <FontAwesomeIcon icon={brands('linkedin')} />,
+    codePen: <FontAwesomeIcon icon={brands('codepen')} />,
+    codeCamp: <FontAwesomeIcon icon={brands('free-code-camp')} />,
+    fileDownload: <FontAwesomeIcon className="footer-link" icon={solid('file-download')} />,
+    email: <FontAwesomeIcon icon={solid('envelope')} />
+  }
 
-  // const formatProjectArray = (arr) => {
-  //   let projectArray = arr.map(element => {
-  //     console.log('element--', element.projectName);
-  //     return (
-  //       <ProjectCard 
-  //         projectName={element.projectName}
-  //         projectLink={element.projectLink}
-  //         projectImage={element.projectImage}
-  //         projectDescription={element.projectDescription}
-  //         techStack={element.techStack}
-  //       />
-  //     )
-  //   });
-  //   console.log(projectArray)
-  //   setProjectElementArray(projectArray)
-  // }
-
-  // useEffect(() => {
-  //   formatProjectArray(projectsArray)
-  // }, [])
-
-  
   return (
     <div className="App">
       <NavBar />
-      {/* <SideBar /> */}
       <QuickNav />
     
       <div id='content-container'>
-        <br></br>
-      {/* <Logo height={100} width={160}/> */}
-      {/* <fieldset>
-        <legend>Hello world</legend>
-        <input type={'radio'} id={'test-1'} name={'test-buttons'} value={'button-1'}></input>
-        <label for='test-1'>Test button 1</label>
-        <input type={'radio'} id={'test-2'} name={'test-buttons'} value={'button-2'}></input>
-        <label for='test-2'>Test button 2</label>
-      </fieldset> */}
+        <h1 id="welcome-title">Welcome!</h1>
+        <img className='profile-picture' src={profilePicture} alt='profile picture' id='profile-picture' width={300} height={300}></img>
 
-
-        <AboutMe languagesList={languagesList} techList={techList}/>
-
-        <div id="skills-field">
-          <div className='content-card'>
-            <h3>Tech Skills</h3>
-            <hr></hr>
-            <div id='skills-container'>
-              {skillsArray.map(skill => {
-                return (
-                  <SkillCard
-                    name={skill.skill}
-                    logo={skill.logo}
-                  />
-                )
-              })}
-            </div>
-          </div>
-        </div>
-
-        <div id='project-field'>
-            <h3>Projects</h3>
-            <hr></hr>
-          <div className='content-card'>
-            {/* {projectElementArray} */}
-            {projectsArray.map(element => {
-              // console.log('element--', element.projectName);
-              return (
-                <ProjectCard 
-                  projectName={element.projectName}
-                  projectLink={element.projectLink}
-                  projectImage={element.projectImage}
-                  projectDescription={element.projectDescription}
-                  techStack={element.techStack}
-                />
-              )
-            })}
-          </div>
-        </div>
-
-        <ContactMe />
+        <AboutMe info={aboutMeObject}/>
+        <Projects projectArray={projectsArray}/>
+        <Skills skillArray={skillsArray} />
+        <ContactMe 
+          linkedIn={linkedInLink} 
+          icons={[fontAwesomeIcons.sms, fontAwesomeIcons.linkedIn, fontAwesomeIcons.email]} />
       </div>
 
       <WebsiteLinks 
@@ -255,9 +206,9 @@ function App() {
         linkedInLink={linkedInLink}
         gitHubLink={gitHubLink} 
         codeCampLink={codeCampLink} 
-        resume={resume}
-      />
-      
+        resume={resumePDF}
+        // icons={[]}
+      /> 
     </div>
   );
 }

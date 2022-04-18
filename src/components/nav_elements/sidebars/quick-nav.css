@@ -1,0 +1,27 @@
+#sidebar {
+  border-left: 2px solid grey;
+  position: fixed;
+  height: calc(100vh - var(--header-height));
+  width: 3em;
+  right: 0;
+  top: var(--header-height);
+  padding-top: 25%;
+  padding-bottom: 25%; 
+  z-index: 999;
+}
+#sidebar-quicknav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+}
+.quick-nav-link {
+  width: 10px;
+  height: 10px;
+  background-color: var(--bold-font-color-faded);
+  border-radius: 50%;
+}
+.quick-nav-link:hover {
+  background-color: var(--bold-font-color-hovor);
+}
