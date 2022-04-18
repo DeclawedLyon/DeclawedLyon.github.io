@@ -12,7 +12,7 @@ export default function ContactMe(props) {
       <h1>Contact Me</h1>
       <div id="contact-me-card">
         <div id="contact-buttons">
-          <button className='contact-button'>{props.icons[0]}</button>
+          {/* <button className='contact-button'>{props.icons[0]}</button> */}
           <button className='contact-button' onClick={() => {window.open('mailto:declan.e.lyons@outlook.com');}}>{props.icons[2]}</button>
           <a href={props.linkedIn} target="_blank"><button className='contact-button'>{props.icons[1]}</button></a>
         </div>

@@ -171,7 +171,7 @@ function App() {
   ]
   const aboutMeObject = {
     name: 'Declan Lyons',
-    description: "My name is Declan. I'm a Full Stack Web Developer out of Victoria, B.C. with a goal-driven creative mindset and passion for learning and innovating. My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible.  I am a graduate of Lighthouse Labs' Full Stack Web Development program."
+    description: "My name is Declan. I'm a Full Stack Web Developer out of Victoria, B.C. I am recent a graduate of Lighthouse Labs' Full Stack Web Development program with a goal-driven creative mindset and passion for learning and innovating! My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible."
   }
   const fontAwesomeIcons = {
     sms: <FontAwesomeIcon icon={solid('comment-sms')} />,
