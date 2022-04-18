@@ -1,9 +1,13 @@
 #contact-me-field {
   display: flex;
+  /* position:relative; */
   flex-direction: column;
   align-items: center;
-  border: 10px solid pink;
-  min-height: 40vh;
+  min-height: 60vh;
+  width: 100%;
+}
+#contact-me-field > hr {
+  width: calc(100vw - var(--sidebar-width));
 }
 .contact-button {
   font-size: 2em;
@@ -13,8 +17,18 @@
   padding: 0.25em;
   border-radius: 50%;
   margin-bottom: 1em;
+  cursor: pointer;
+}
+#contact-me-card {
+  position: relative;
+  background-color: var(--secondary);
+  border: 2px solid gray;
+  /* margin: auto; */
+  padding: 2em;
+  border-radius: 2.5%;
 }
 #contact-me-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 40vw;
@@ -23,8 +37,9 @@
 #user-name {
   width: 100%;
 }
-#email-address {
+#email-subject {
   width: 100%;
+  margin-bottom: 0.5em;
 }
 #email-message {
   width: 100%;
@@ -36,4 +51,12 @@
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
+  margin-bottom: 0.5em;
+}
+#enter-button {
+  position: relative;
+  /* justify-self: end; */
+  /* right: 0; */
+  /* left: 100px; */
+  float: right;
 }

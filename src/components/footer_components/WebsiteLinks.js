@@ -15,7 +15,7 @@ export default function WebsiteLinks(props) {
           <FontAwesomeIcon className="footer-link" icon={brands('codepen')} /></a></li>
         <li><a href={props.codeCampLink} target="_blank">
           <FontAwesomeIcon className="footer-link" icon={brands('free-code-camp')} /></a></li>
-       <li> <a href={'#'}>
+       <li> <a href={props.resume} download>
         <FontAwesomeIcon className="footer-link" icon={solid('file-download')} /></a></li>
       </ul>
     </footer>

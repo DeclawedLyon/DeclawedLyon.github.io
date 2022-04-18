@@ -20,6 +20,15 @@
 
 .nav-item {
   color: var(--accent2);
+  text-decoration-line: none;
+  border: 2px solid gray;
+  border-radius: 7.5%;
+  padding: 0.5em;
+  padding-inline: 1em;
+}
+
+.nav-item:hover {
+  background-color: rgba(128, 128, 128, 0.25);
 }
 
 .menu-icon {

@@ -4,8 +4,8 @@ export default function Projects(props) {
 
   return (
     <div id='project-field'>
-        <h3>Projects</h3>
         <hr></hr>
+        <h1>Projects</h1>
       <div className='content-card'>
         {/* {projectElementArray} */}
         {props.projectArray.map((element, x) => {

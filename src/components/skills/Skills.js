@@ -4,9 +4,9 @@ export default function Skills(props) {
 
   return (
     <div id="skills-field">
-      <div className='content-card'>
-        <h3>Tech Skills</h3>
         <hr></hr>
+      <div className='content-card'>
+        <h1>Tech Skills</h1>
         <div id='skills-container'>
           {props.skillArray.map((skill, x) => {
             return (

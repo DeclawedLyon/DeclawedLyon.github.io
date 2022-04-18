@@ -11,6 +11,7 @@ import WebsiteLinks from './components/footer_components/WebsiteLinks';
 import Skills from './components/skills/Skills';
 import QuickNav from './components/nav_elements/sidebars/QuickNav';
 import ContactMe from './components/contact_me/ContactMe';
+import Projects from './components/projects/Projects';
 
 // ============================
 //            Images
@@ -21,7 +22,8 @@ import bookWorldPhoto from './images/projects/bookWorld_2.png'
 import tweeterPhoto from './images/projects/tweeter.png'
 import schedulerPhoto from './images/projects/schedulerImage_2.png'
 import jqueryLogo from './images/skills/jquery_logo_icon_167804.png'
-import Projects from './components/projects/Projects';
+import resumePDF from './images/DeclanLyonsResume.pdf'
+import spwImage from './images/projects/SPWStore.png'
 
 function App() {
   // ==========================
@@ -34,7 +36,7 @@ function App() {
   const codeCampCertificates = {
     responsiveWebDesign: 'https://freecodecamp.org/certification/Declawed_Lyon/responsive-web-design',
   }
-  const resume = 'link to resume file in ?public? file.'
+  // const resume = 'link to resume file in ?public? file.'
   // const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
   // const techList = ['React', 'Angular', 'MongoDB']
   const projectsArray = [
@@ -43,35 +45,40 @@ function App() {
       projectLink: 'https://github.com/DeclawedLyon/Bridge-Final-Project',
       projectImage: bridgePhoto,
       projectDescription: 'Bridge is a shipping logistics utility application. It helps businesses or people with intensive shipping requirements keep all of their information in one place. This makes supply chain management easier and more manageable for the user.',
-      techStack: ['Node,js', 'React', 'PostgreSQL', 'Ruby on Rails']
+      techStack: ['Node,js', 'React', 'PostgreSQL', 'Ruby on Rails'],
+      development: false
     },
     {
       projectName: 'Book World',
       projectLink: 'https://github.com/DeclawedLyon/midterm_store',
       projectImage: bookWorldPhoto,
       projectDescription: 'Book World is a buy-and-sell app built with Node.js, Express and PostgreSQL. The app features a homepage, a favorites page, a shopping cart as well as the ability to message sellers. Users can favourite items to come back to later and can use the search feature to find specific items and filter them by price. Users have a converstations page where they can access their messages with buyers, and can mark items as sold.',
-      techStack: ['Node.js', 'Express', 'PostgreSQL']
+      techStack: ['Node.js', 'Express', 'PostgreSQL'],
+      development: false
     },
     {
       projectName: 'SPW Stock Display',
       projectLink: 'https://github.com/DeclawedLyon/Store_Display',
-      projectImage: bridgePhoto,
+      projectImage: spwImage,
       projectDescription: 'Product display app for front of store staff use.',
-      techStack: []
+      techStack: [],
+      development: true
     },
     {
       projectName: 'Scheduler',
       projectLink: 'https://github.com/DeclawedLyon/Scheduler',
       projectImage: schedulerPhoto,
       projectDescription: 'A demo React Application designed to help schedule interviews between students and teachers.',
-      techStack: []
+      techStack: [],
+      development: false
     },
     {
       projectName: 'Tweeter',
       projectLink: 'https://github.com/DeclawedLyon/tweeter',
       projectImage: tweeterPhoto,
       projectDescription: 'Tweeter is a simple, single-page Twitter clone.',
-      techStack: ['Node.js', 'Express', 'Mongo']
+      techStack: ['Node.js', 'Express', 'Mongo'],
+      development: false
     }
   ]
 
@@ -189,7 +196,9 @@ function App() {
         <AboutMe info={aboutMeObject}/>
         <Projects projectArray={projectsArray}/>
         <Skills skillArray={skillsArray} />
-        <ContactMe icons={[fontAwesomeIcons.sms, fontAwesomeIcons.linkedIn, fontAwesomeIcons.email]} />
+        <ContactMe 
+          linkedIn={linkedInLink} 
+          icons={[fontAwesomeIcons.sms, fontAwesomeIcons.linkedIn, fontAwesomeIcons.email]} />
       </div>
 
       <WebsiteLinks 
@@ -197,7 +206,7 @@ function App() {
         linkedInLink={linkedInLink}
         gitHubLink={gitHubLink} 
         codeCampLink={codeCampLink} 
-        resume={resume}
+        resume={resumePDF}
         // icons={[]}
       /> 
     </div>

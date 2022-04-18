@@ -7,7 +7,7 @@ export default function SkillCard(props) {
       <div className='image-container'>
         <img src={props.logo} alt="skill logo" className='skill-logo'></img>
       </div>
-      <h1>{props.name}</h1>
+      <h2>{props.name}</h2>
     </div>
   )
 }
