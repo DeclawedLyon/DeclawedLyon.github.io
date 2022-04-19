@@ -1,4 +1,4 @@
-import '../nav-bars.css'
+import './side-bar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 import { useContext } from 'react';
@@ -14,11 +14,11 @@ export default function SideBar () {
       <div className='side-bar-logo'>
       </div>
       <div className='side-bar-main'>
-        <a href="#" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('fire')} />{state.sideBarIsOpen && 'About'}</div></a>
-        <a href="#" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('tasks-alt')}/> {state.sideBarIsOpen && 'Skills'}</div></a>
-        <a href="#" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('history')}/>{state.sideBarIsOpen && 'Experience'}</div></a>
-        <a href="#" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('project-diagram')} />{state.sideBarIsOpen && 'Projects'}</div></a>
-        <a href="#" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('address-card')} />{state.sideBarIsOpen && 'Contact'}</div></a>
+        <a href="#welcome-title" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('fire')} />{state.sideBarIsOpen && 'About'}</div></a>
+        <a href="#about-me-field" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('tasks-alt')}/> {state.sideBarIsOpen && 'Skills'}</div></a>
+        <a href="#project-field" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('history')}/>{state.sideBarIsOpen && 'Experience'}</div></a>
+        <a href="#skills-field" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('project-diagram')} />{state.sideBarIsOpen && 'Projects'}</div></a>
+        <a href="#contact-me-field" className={`menu-icon ${state.sideBarIsOpen ? 'open' : ''}`}><div><FontAwesomeIcon icon={solid('address-card')} />{state.sideBarIsOpen && 'Contact'}</div></a>
       </div>
       <div className='side-bar-end'>
         <h3 className={`footer-id ${state.sideBarIsOpen ? 'open' : 'closed'} ${state.isIcon ? 'is-icon' : 'isnt-icon'}`}>
