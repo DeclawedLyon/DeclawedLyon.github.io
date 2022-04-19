@@ -7,7 +7,7 @@
 }
 
 .logo-main {
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   z-index: 5;
   /* margin-bottom: -40px; */
@@ -36,7 +36,7 @@
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .logo-main {
     animation: App-logo-spin infinite 20s linear;
   }
 }
