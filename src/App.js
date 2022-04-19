@@ -2,6 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 import './App.css';
 // ============================
+//            Hooks
+// ============================
+import useVisualMode from './hooks/useVisualMode';
+// ============================
 //          Components
 // ============================
 // import SideBar from './components/sidebars/SideBar';
@@ -24,11 +28,15 @@ import schedulerPhoto from './images/projects/schedulerImage_2.png'
 import jqueryLogo from './images/skills/jquery_logo_icon_167804.png'
 import resumePDF from './images/DeclanLyonsResume.pdf'
 import spwImage from './images/projects/SPWStore.png'
+import Backyard from './components/backyard/Backyard';
 
 function App() {
   // ==========================
   //       App Variables
   // ==========================
+  const dev = false;
+
+
   const codePenLink = 'https://codepen.io/declawedlyon'
   const linkedInLink = 'https://www.linkedin.com/in/declan-lyons-099052223/'
   const gitHubLink = 'https://github.com/declawedlyon'
@@ -36,7 +44,6 @@ function App() {
   const codeCampCertificates = {
     responsiveWebDesign: 'https://freecodecamp.org/certification/Declawed_Lyon/responsive-web-design',
   }
-  // const resume = 'link to resume file in ?public? file.'
   // const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
   // const techList = ['React', 'Angular', 'MongoDB']
   const projectsArray = [
@@ -183,24 +190,41 @@ function App() {
     fileDownload: <FontAwesomeIcon className="footer-link" icon={solid('file-download')} />,
     email: <FontAwesomeIcon icon={solid('envelope')} />
   }
+  // ==========================
+  //          Modes
+  // ==========================
+  const APP = 'APP'
+  const DEVENV = 'DEVENV'
+  // ==========================
+  //        Functions
+  // ==========================
+
+  const {mode, transition, back } = useVisualMode(
+    dev ? APP : DEVENV
+  )
 
   return (
     <div className="App">
-      <NavBar />
-      <QuickNav />
+      {mode === DEVENV && <Backyard />}
+
+      {mode === APP && <NavBar />}
+      {mode === APP && <QuickNav />}
     
-      <div id='content-container'>
+      {mode == APP && (<div id='content-container'>
         <h1 id="welcome-title">Welcome!</h1>
         <img className='profile-picture' src={profilePicture} alt='profile picture' id='profile-picture' width={300} height={300}></img>
 
-        <AboutMe info={aboutMeObject}/>
-        <Projects projectArray={projectsArray}/>
-        <Skills skillArray={skillsArray} />
+        {mode === APP && <AboutMe info={aboutMeObject}/>}
+        {mode === APP && <Projects projectArray={projectsArray}/>}
+        {mode === APP && <Skills skillArray={skillsArray} />}
+        {mode === APP && (
         <ContactMe 
           linkedIn={linkedInLink} 
-          icons={[fontAwesomeIcons.sms, fontAwesomeIcons.linkedIn, fontAwesomeIcons.email]} />
-      </div>
+          icons={[fontAwesomeIcons.sms, fontAwesomeIcons.linkedIn, fontAwesomeIcons.email]} 
+        />)}
+      </div>)}
 
+      {mode === APP && (
       <WebsiteLinks 
         codePenLink={codePenLink}
         linkedInLink={linkedInLink}
@@ -208,7 +232,7 @@ function App() {
         codeCampLink={codeCampLink} 
         resume={resumePDF}
         // icons={[]}
-      /> 
+      />)}
     </div>
   );
 }
