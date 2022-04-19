@@ -1,13 +1,13 @@
 import './nav-bars.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
-import Logo from '../Logo'
+// import Logo from '../Logo'
 
 export default function NavBar(props) {
   return (
     <nav id="nav-bar">
       {/* These links will either be links to pages OR links to page locations */}
-      <Logo height={60} />
+      {/* <Logo height={60} /> */}
       <a href="#welcome-title" className="nav-item">Home</a>
       <a href="#about-me-field" className="nav-item">About Me</a>
       <a href="#project-field" className="nav-item">Projects</a>
