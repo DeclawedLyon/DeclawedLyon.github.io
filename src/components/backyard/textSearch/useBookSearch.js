@@ -6,6 +6,12 @@ export default function useBookSearch(query, pageNum) {
   const [error, setError] = useState(false);
   const [books, setBooks] = useState([]);
   const [hasMore, setHasMore] = useState(false);
+  // useEffect clears array when user types so books don't append onto
+  // old lists
+  useEffect(() => {
+    setBooks([])
+  }, [query])
+
   //useEffect makes axios request each time the query OR
   //pageNum is updated.
   useEffect(() => {
@@ -24,12 +30,16 @@ export default function useBookSearch(query, pageNum) {
 
     }).then(res => {
       // console.log(res.data)
+      console.log(res.data.docs)
       setBooks(prevBooks => {
-        return [...new Set([...prevBooks, res.data.docs.map(b => {
+        return [...new Set([...prevBooks, ...res.data.docs.map(b => {
           // console.log(b.title)
           return b.title
         })])]
       })
+      if (res.data.docs.length === 0) {
+        setBooks(false)
+      }
       setHasMore(res.data.docs.length > 0)
       setLoading(false)
       //handles data
