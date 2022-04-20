@@ -30,7 +30,7 @@ export default function useBookSearch(query, pageNum) {
 
     }).then(res => {
       // console.log(res.data)
-      console.log(res.data.docs)
+      // console.log(res.data.docs)
       setBooks(prevBooks => {
         return [...new Set([...prevBooks, ...res.data.docs.map(b => {
           // console.log(b.title)
@@ -38,7 +38,7 @@ export default function useBookSearch(query, pageNum) {
         })])]
       })
       if (res.data.docs.length === 0) {
-        setBooks(false)
+        setBooks(['No books found :('])
       }
       setHasMore(res.data.docs.length > 0)
       setLoading(false)
