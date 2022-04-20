@@ -30,15 +30,17 @@ export default function useBookSearch(query, pageNum) {
           return b.title
         })])]
       })
+      setHasMore(res.data.docs.length > 0)
+      setLoading(false)
       //handles data
 
     }).catch(e => {
 
       //cancels request if user is currently typing
       if (axios.isCancel(e)) return
-
+      setError(true)
     })
     return () => cancel()
   }, [query, pageNum])
-  return null
+  return {loading, error, books, hasMore}
 }
