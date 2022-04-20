@@ -5,7 +5,9 @@ export default function BookCard(props) {
     return <div>{title}</div>
   };
   const titleElement = formatTitle(props.title);
-  props.forwardRef(titleElement);
+  console.log('--' , titleElement , '--')
+  // props.forwardRef(titleElement);
+  props.forwardRef(<div>{props.title}</div>);
   return (
     <div>{props.title}</div>
   )
