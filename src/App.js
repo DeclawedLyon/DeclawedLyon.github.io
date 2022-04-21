@@ -41,11 +41,7 @@ function App() {
   // ==========================
   //       App Variables
   // ==========================
-<<<<<<< HEAD
-  const dev = false;
-=======
   const [dev, setDev] = useState(false);
->>>>>>> development
 
 
   const codePenLink = 'https://codepen.io/declawedlyon'
@@ -211,20 +207,12 @@ function App() {
   // ==========================
 
   const {mode, transition, back } = useVisualMode(
-<<<<<<< HEAD
-    dev ? APP : DEVENV
-=======
     dev ? DEVENV : APP 
->>>>>>> development
   )
 
   return (
     <div className="App">
-<<<<<<< HEAD
-      {mode === DEVENV && <Backyard />}
-=======
       {mode === DEVENV && <Backyard transition={() => transition(APP)}/>}
->>>>>>> development
 
       {mode === APP && <NavBar />}
       {mode === APP && <QuickNav />}
@@ -252,10 +240,7 @@ function App() {
         resume={resumePDF}
         // icons={[]}
       />)}
-<<<<<<< HEAD
-=======
       {/* {mode === APP && <button onClick={() => transition(DEVENV)}>backyard</button>} */}
->>>>>>> development
     </div>
   );
 }
