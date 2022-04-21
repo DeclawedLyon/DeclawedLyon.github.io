@@ -41,7 +41,7 @@ function App() {
   // ==========================
   //       App Variables
   // ==========================
-  const [dev, setDev] = useState(false);
+  const [dev, setDev] = useState(true);
 
 
   const codePenLink = 'https://codepen.io/declawedlyon'
