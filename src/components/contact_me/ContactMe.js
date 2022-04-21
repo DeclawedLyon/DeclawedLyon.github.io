@@ -22,7 +22,7 @@ export default function ContactMe(props) {
           <textarea id="email-message" type={'text'} placeholder='Enter your message...' onChange={e => {setEmailMessage(e.target.value)}} required></textarea>
           <button id="enter-button" type={'submit'} onClick={(e) => {
             e.preventDefault();
-            if(emailMessage === '') {
+            if(emailMessage !== '') {
               window.open(`mailto:declan.e.lyons@outlook.com?subject=${emailSubject ? emailSubject : ''}&body=${emailMessage}`)
             } else {
               //set error message

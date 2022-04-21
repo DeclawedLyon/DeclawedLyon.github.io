@@ -1,9 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+// ============================
+//            Styles
+// ============================
 import './App.css';
+// ============================
+//            Macros
+// ============================
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 // ============================
 //            Hooks
 // ============================
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useVisualMode from './hooks/useVisualMode';
 // ============================
 //          Components
@@ -34,7 +41,11 @@ function App() {
   // ==========================
   //       App Variables
   // ==========================
+<<<<<<< HEAD
   const dev = false;
+=======
+  const [dev, setDev] = useState(false);
+>>>>>>> development
 
 
   const codePenLink = 'https://codepen.io/declawedlyon'
@@ -200,12 +211,20 @@ function App() {
   // ==========================
 
   const {mode, transition, back } = useVisualMode(
+<<<<<<< HEAD
     dev ? APP : DEVENV
+=======
+    dev ? DEVENV : APP 
+>>>>>>> development
   )
 
   return (
     <div className="App">
+<<<<<<< HEAD
       {mode === DEVENV && <Backyard />}
+=======
+      {mode === DEVENV && <Backyard transition={() => transition(APP)}/>}
+>>>>>>> development
 
       {mode === APP && <NavBar />}
       {mode === APP && <QuickNav />}
@@ -233,6 +252,10 @@ function App() {
         resume={resumePDF}
         // icons={[]}
       />)}
+<<<<<<< HEAD
+=======
+      {/* {mode === APP && <button onClick={() => transition(DEVENV)}>backyard</button>} */}
+>>>>>>> development
     </div>
   );
 }
