@@ -240,7 +240,7 @@ function App() {
         resume={resumePDF}
         // icons={[]}
       />)}
-      {mode === APP && <button onClick={() => transition(DEVENV)}>backyard</button>}
+      {/* {mode === APP && <button onClick={() => transition(DEVENV)}>backyard</button>} */}
     </div>
   );
 }
