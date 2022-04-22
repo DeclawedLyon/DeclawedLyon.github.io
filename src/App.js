@@ -41,7 +41,8 @@ function App() {
   // ==========================
   //       App Variables
   // ==========================
-  const [dev, setDev] = useState(false);
+  const [dev, setDev] = useState(true);
+  const apiKey = process.env.REACT_APP_API_KEY;
 
 
   const codePenLink = 'https://codepen.io/declawedlyon'
@@ -240,6 +241,7 @@ function App() {
         resume={resumePDF}
         // icons={[]}
       />)}
+        <script async defer src={`https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`}></script>
       {/* {mode === APP && <button onClick={() => transition(DEVENV)}>backyard</button>} */}
     </div>
   );
