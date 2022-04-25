@@ -1,6 +1,6 @@
-import React from 'react'
+// import React, { Component } from 'react'
 // npm i --save google-map-react
-import GoogleMapReact from 'google-map-react'
+// import GoogleMapReact from 'google-map-react'
 // import { Icon } from '@iconify/react'
 // import locationIcon from '@iconify/icons-mdi/map-marker'
 
@@ -8,31 +8,108 @@ import GoogleMapReact from 'google-map-react'
 // import { Loader } from '@googlemaps/js-api-loader';
 
 
-export default function GoogleMap({location, zoomLevel}) {
+// const GoogleMap = ({text}) => {
+//   return (
+//     <div>{text}</div>
+//   )
+// };
+
+// class SimpleMap extends Component {
+//   static defaultProps = {
+//     center: {
+//       lat: 48.437391,
+//       lng: -123.419482,
+//     },
+//     xoom: 11
+//   }
+// };
+
+import React from 'react'
+import GoogleMapReact from 'google-map-react'
+// import { Icon } from '@iconify/react'
+// import locationIcon from '@iconify/icons-mdi/map-marker'
+
+// import './map.css'
+
+// const LocationPin = ({ text }) => (
+//   <div className="pin">
+//     <Icon icon={locationIcon} className="pin-icon" />
+//     <p className="pin-text">{text}</p>
+//   </div>
+// )
+
+const GoogleMap = ({ location, zoomLevel }) => {
   const apiKey = process.env.REACT_APP_API_KEY;
   console.log(apiKey)
-
-  
   return (
     <div className="map">
       <h2 className="map-h2">Come Visit Us At Our Campus</h2>
 
-      <div className="google-map">
+      <div className="google-map" style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: apiKey }}
           defaultCenter={location}
           defaultZoom={zoomLevel}
         >
-          {/* <LocationPin
-            lat={location.lat}
-            lng={location.lng}
-            text={location.address}
-          /> */}
         </GoogleMapReact>
       </div>
     </div>
   )
 }
+{/* <LocationPin
+            lat={location.lat}
+            lng={location.lng}
+            text={location.address}
+          /> */}
+
+export default GoogleMap
+
+// render() {
+//   return (
+//     // Important! Always set the container height explicitly
+//     <div style={{ height: '100vh', width: '100%' }}>
+//       <GoogleMapReact
+//         bootstrapURLKeys={{ key: /* YOUR KEY HERE */ }}
+//         defaultCenter={this.props.center}
+//         defaultZoom={this.props.zoom}
+//       >
+//         <AnyReactComponent
+//           lat={59.955413}
+//           lng={30.337844}
+//           text="My Marker"
+//         />
+//       </GoogleMapReact>
+//     </div>
+//   )
+// };
+
+
+
+// export default function GoogleMap({location, zoomLevel}) {
+//   const apiKey = process.env.REACT_APP_API_KEY;
+//   console.log(apiKey)
+
+  
+//   return (
+//     <div className="map">
+//       <h2 className="map-h2">Come Visit Us At Our Campus</h2>
+
+//       <div className="google-map">
+//         <GoogleMapReact
+//           bootstrapURLKeys={{ key: apiKey }}
+//           defaultCenter={location}
+//           defaultZoom={zoomLevel}
+//         >
+//           {/* <LocationPin
+//             lat={location.lat}
+//             lng={location.lng}
+//             text={location.address}
+//           /> */}
+//         </GoogleMapReact>
+//       </div>
+//     </div>
+//   )
+// }
 
 // const LocationPin = ({ text }) => (
   //   <div className="pin">
@@ -57,8 +134,8 @@ export default function GoogleMap({location, zoomLevel}) {
   // };
   // const location = {
   //   address: 'Colville Park',
-  //   lat: 48.437391,
-  //   lng: -123.419482,
+    // lat: 48.437391,
+    // lng: -123.419482,
     
 
 
