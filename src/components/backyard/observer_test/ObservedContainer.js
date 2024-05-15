@@ -20,17 +20,33 @@ export default function ObservedContainer() {
     setIsVisible(entry.isIntersecting);
   };
 
+<<<<<<< HEAD
+=======
+  // 4) Create the options object with the same values as the image.
+>>>>>>> development
   const options = {
     root: null,
     rootMargine: "0px",
     threshold: 1.0,
   };
 
+<<<<<<< HEAD
+=======
+
+  // 5) Add the react hook useEffect and create an observer contructor
+  //  using the callback function and the options we just created before 
+  
+>>>>>>> development
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options);
     if (containerReference.current)
       observer.observe(containerReference.current);
 
+<<<<<<< HEAD
+=======
+    // * it's optional in our case but you can return a cleanup function to
+    // unobserve our target when the component unmounts.
+>>>>>>> development
     return () => {
       if (containerReference.current)
         observer.unobserve(containerReference.current);
@@ -40,6 +56,10 @@ export default function ObservedContainer() {
     <div id="observer-test">
       <div className='isVisible'>{isVisible ? 'IN VIEWPORT' : 'NOT IN VIEWPORT'} observedContainer</div>
       <div className="section"></div>
+<<<<<<< HEAD
+=======
+      {/* Set the (containerReference) useRef variable on the element we want to observe. */}
+>>>>>>> development
       <div className="box" ref={containerReference}>Observe Me</div>
     </div>
   )

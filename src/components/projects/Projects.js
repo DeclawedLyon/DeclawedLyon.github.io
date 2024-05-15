@@ -18,6 +18,7 @@ export default function Projects(props) {
               projectImage={element.projectImage}
               projectDescription={element.projectDescription}
               techStack={element.techStack}
+              development={element.development}
             />
           )
         })}

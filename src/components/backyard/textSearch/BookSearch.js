@@ -43,7 +43,7 @@ export default function BookSearch(props) {
     //      TypeError: Failed to execute 'observe' on 'IntersectionObserver': parameter 1 is not of type 'Element'.
     //    when i try to add to react component.      
     
-    console.log(reactNode)
+    // console.log(reactNode)
   }, [loading, hasMore])
   
   // when user types into text search input field, function sets
