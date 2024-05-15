@@ -36,12 +36,13 @@ import jqueryLogo from './images/skills/jquery_logo_icon_167804.png'
 import resumePDF from './images/DeclanLyonsResume.pdf'
 import spwImage from './images/projects/SPWStore.png'
 import Backyard from './components/backyard/Backyard';
+import sagelyPhoto from './images/projects/Sagely.png'
 
 function App() {
   // ==========================
   //       App Variables
   // ==========================
-  const [dev, setDev] = useState(true);
+  const [dev, setDev] = useState(false);
   const apiKey = process.env.REACT_APP_API_KEY;
 
 
@@ -56,11 +57,19 @@ function App() {
   // const techList = ['React', 'Angular', 'MongoDB']
   const projectsArray = [
     {
+      projectName: 'Sagely',
+      projectLink: 'https://github.com/DeclawedLyon/k2-demo-next-tailwind',
+      projectImage: sagelyPhoto,
+      projectDescription: `Sagely is an evolving project tracker designed to simplify the management of financial documents related to your projects. While it doesn’t currently integrate with Sage 50, it offers a user-friendly interface for tracking quotes, invoices, and work orders. As you continue to develop Sagely, it aims to provide a comprehensive solution for project management, allowing you to associate these financial documents with larger project files.`,
+      techStack: ['Node.JS', 'Next.JS', 'SQLite', 'Prisma ORM'],
+      development: true
+    },
+    {
       projectName: 'Bridge',
       projectLink: 'https://github.com/DeclawedLyon/Bridge-Final-Project',
       projectImage: bridgePhoto,
       projectDescription: 'Bridge is a shipping logistics utility application. It helps businesses or people with intensive shipping requirements keep all of their information in one place. This makes supply chain management easier and more manageable for the user.',
-      techStack: ['Node,js', 'React', 'PostgreSQL', 'Ruby on Rails'],
+      techStack: ['Node.JS', 'React', 'PostgreSQL', 'Ruby on Rails'],
       development: false
     },
     {
@@ -68,7 +77,7 @@ function App() {
       projectLink: 'https://github.com/DeclawedLyon/midterm_store',
       projectImage: bookWorldPhoto,
       projectDescription: 'Book World is a buy-and-sell app built with Node.js, Express and PostgreSQL. The app features a homepage, a favorites page, a shopping cart as well as the ability to message sellers. Users can favourite items to come back to later and can use the search feature to find specific items and filter them by price. Users have a converstations page where they can access their messages with buyers, and can mark items as sold.',
-      techStack: ['Node.js', 'Express', 'PostgreSQL'],
+      techStack: ['Node.JS', 'Express', 'PostgreSQL'],
       development: false
     },
     {
@@ -76,15 +85,15 @@ function App() {
       projectLink: 'https://github.com/DeclawedLyon/Store_Display',
       projectImage: spwImage,
       projectDescription: 'Product display app for front of store staff use.',
-      techStack: [],
-      development: true
+      techStack: ['Node.JS', 'Ruby', 'Rails'],
+      development: false
     },
     {
       projectName: 'Scheduler',
       projectLink: 'https://github.com/DeclawedLyon/Scheduler',
       projectImage: schedulerPhoto,
       projectDescription: 'A demo React Application designed to help schedule interviews between students and teachers.',
-      techStack: [],
+      techStack: ['Node.JS', 'React', 'Express'],
       development: false
     },
     {
@@ -99,54 +108,32 @@ function App() {
 
   const skillsArray = [
     {
-      skill: 'Node.js',
-      // logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg'
-      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/d8c8025b1695a3f14f849b99afc71d917ef40813-480x480.png' 
-    },
-    {
-      skill: 'Git',
-      // logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Git-logo-black.svg' 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Git_format.png' 
+      skill: 'TypeScript',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg'
     },
     {
       skill: 'JavaScript',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Javascript_on_figma.png' 
     },
     {
-      skill: 'HTML',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg' 
-    },
-    {
-      skill: 'CSS',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' 
-    },
-    {
-      skill: 'SASS',
-      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/2825d163301127c72b6121baebb5e570689596e5-480x480.png'
-    },
-    {
-      skill: 'Ruby',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg' 
-    },
-    {
-      skill: 'Rails',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg' 
-    },
-    // {
-    //   skill: 'C#',
-    //   logo: 'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)#/media/File:C_Sharp_wordmark.svg' 
-    // },
-    {
-      skill: 'Angular',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg' 
-    },
-    {
       skill: 'React.js',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' 
     },
     {
-      skill: 'Redux',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png' 
+      skill: 'NextJs',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg'
+    },
+    {
+      skill: 'Node.js',
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/d8c8025b1695a3f14f849b99afc71d917ef40813-480x480.png' 
+    },
+    {
+      skill: 'Git',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Git_format.png' 
+    },
+    {
+      skill: 'Tailwind',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png?20230715030042'
     },
     {
       skill: 'Material UI',
@@ -157,23 +144,20 @@ function App() {
       logo: 'https://cdn.sanity.io/images/yl4vxloa/production/fd636cb44ce8d52b8a70c399cec0bab2c51b39f4-1024x1024.png' 
     },
     {
-      skill: 'JQuery',
-      // logo: 'https://upload.wikimedia.org/wikipedia/commons/8/81/JQuery_logo_text.svg' 
-      logo: jqueryLogo 
-    },
-    {
       skill: 'Socket.io',
       logo: 'https://cdn.sanity.io/images/yl4vxloa/production/c0941751c096119d67259c2b549f5a90e8c086dd-512x512.png' 
     },
     {
       skill: 'Twilio',
-      // logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg' 
       logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Cib-twilio_%28CoreUI_Icons_v1.0.0%29.svg' 
     },
     {
       skill: 'Netlify',
-      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/a585504e30bdadca447b3302af097fa769d6eb48-2400x2400.png' 
-      // logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg' 
+      logo: 'https://cdn.sanity.io/images/yl4vxloa/production/a585504e30bdadca447b3302af097fa769d6eb48-2400x2400.png'
+    },
+    {
+      skill: 'Redux',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png' 
     },
     {
       skill: 'PostgreSQL',
@@ -183,10 +167,14 @@ function App() {
       skill: 'MongoDB',
       logo: 'https://cdn.sanity.io/images/yl4vxloa/production/72eb74dae2b1a60c597435c1c3b0b4a7f087886b-650x650.png' 
     },
+    {
+      skill: 'Prisma',
+      logo: 'https://prismalens.vercel.app/header/logo-white.svg'
+    }
   ]
   const aboutMeObject = {
     name: 'Declan Lyons',
-    description: "My name is Declan. I'm a Full Stack Web Developer out of Victoria, B.C. I am recent a graduate of Lighthouse Labs' Full Stack Web Development program with a goal-driven creative mindset and passion for learning and innovating! My focus is on Front-end Web Development while staying up to date with the newest technologies to build creative apps in the most efficient way possible."
+    description: "I'm a Full Stack Web Developer with a solid foundation in TypeScript, Next.js, and React. My approach to web development is rooted in a deep understanding of both front-end and back-end technologies, enabling me to build comprehensive web solutions. I specialize in the full development lifecycle, from conceptualizing and designing scalable architectures to implementing responsive UIs. "
   }
   const fontAwesomeIcons = {
     sms: <FontAwesomeIcon icon={solid('comment-sms')} />,
@@ -216,7 +204,13 @@ function App() {
       {mode === DEVENV && <Backyard transition={() => transition(APP)}/>}
 
       {mode === APP && <NavBar />}
-      {mode === APP && <QuickNav />}
+      {mode === APP && <QuickNav 
+        codePenLink={codePenLink}
+        linkedInLink={linkedInLink}
+        gitHubLink={gitHubLink} 
+        codeCampLink={codeCampLink} 
+        resume={resumePDF}
+      />}
     
       {mode == APP && (<div id='content-container'>
         <h1 id="welcome-title">Welcome!</h1>
@@ -232,16 +226,7 @@ function App() {
         />)}
       </div>)}
 
-      {mode === APP && (
-      <WebsiteLinks 
-        codePenLink={codePenLink}
-        linkedInLink={linkedInLink}
-        gitHubLink={gitHubLink} 
-        codeCampLink={codeCampLink} 
-        resume={resumePDF}
-        // icons={[]}
-      />)}
-        <script async defer src={`https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`}></script>
+      
       {/* {mode === APP && <button onClick={() => transition(DEVENV)}>backyard</button>} */}
     </div>
   );
