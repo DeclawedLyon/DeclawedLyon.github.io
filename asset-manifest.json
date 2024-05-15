@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.78f47cc4.css",
+    "main.js": "/static/js/main.d7b8d1b8.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/SPWStore.png": "/static/media/SPWStore.c3a57e969d4488199a1f.png",
+    "static/media/20220321_184854.jpg": "/static/media/20220321_184854.d17542195ae84ef55827.jpg",
+    "static/media/bookWorld_2.png": "/static/media/bookWorld_2.ed00cf90fd994f1c9080.png",
+    "static/media/tweeter.png": "/static/media/tweeter.f68f92815a500be914de.png",
+    "static/media/schedulerImage_2.png": "/static/media/schedulerImage_2.76ec65b5a731a1d174a0.png",
+    "static/media/DeclanLyonsResume.pdf": "/static/media/DeclanLyonsResume.de37bba5ce8b3ade8b3f.pdf",
+    "static/media/bridge-dashboard.png": "/static/media/bridge-dashboard.ef78b44e45dbb82c93ac.png",
+    "static/media/jquery_logo_icon_167804.png": "/static/media/jquery_logo_icon_167804.59c0d4d26fb6326be9c3.png",
+    "index.html": "/index.html",
+    "main.78f47cc4.css.map": "/static/css/main.78f47cc4.css.map",
+    "main.d7b8d1b8.js.map": "/static/js/main.d7b8d1b8.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78f47cc4.css",
+    "static/js/main.d7b8d1b8.js"
+  ]
+}
