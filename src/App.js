@@ -18,7 +18,6 @@ import useVisualMode from './hooks/useVisualMode';
 // import SideBar from './components/sidebars/SideBar';
 import NavBar from './components/nav_elements/NavBar';
 import AboutMe from './components/about_me/AboutMe';
-import WebsiteLinks from './components/footer_components/WebsiteLinks';
 import Skills from './components/skills/Skills';
 import QuickNav from './components/nav_elements/sidebars/QuickNav';
 import ContactMe from './components/contact_me/ContactMe';
@@ -32,7 +31,6 @@ import bridgePhoto from './images/projects/bridge-dashboard.png'
 import bookWorldPhoto from './images/projects/bookWorld_2.png'
 import tweeterPhoto from './images/projects/tweeter.png'
 import schedulerPhoto from './images/projects/schedulerImage_2.png'
-import jqueryLogo from './images/skills/jquery_logo_icon_167804.png'
 import resumePDF from './images/DeclanLyonsResume.pdf'
 import spwImage from './images/projects/SPWStore.png'
 import Backyard from './components/backyard/Backyard';
@@ -42,17 +40,15 @@ function App() {
   // ==========================
   //       App Variables
   // ==========================
-  const [dev, setDev] = useState(false);
-  const apiKey = process.env.REACT_APP_API_KEY;
 
 
   const codePenLink = 'https://codepen.io/declawedlyon'
   const linkedInLink = 'https://www.linkedin.com/in/declan-lyons-099052223/'
   const gitHubLink = 'https://github.com/declawedlyon'
   const codeCampLink = "https://www.freecodecamp.org/Declawed_Lyon"
-  const codeCampCertificates = {
-    responsiveWebDesign: 'https://freecodecamp.org/certification/Declawed_Lyon/responsive-web-design',
-  }
+  // const codeCampCertificates = {
+  //   responsiveWebDesign: 'https://freecodecamp.org/certification/Declawed_Lyon/responsive-web-design',
+  // }
   // const languagesList = ['JavaScript', 'HTML', 'CSS', 'SQL'] 
   // const techList = ['React', 'Angular', 'MongoDB']
   const projectsArray = [
@@ -186,48 +182,32 @@ function App() {
     fileDownload: <FontAwesomeIcon className="footer-link" icon={solid('file-download')} />,
     email: <FontAwesomeIcon icon={solid('envelope')} />
   }
-  // ==========================
-  //          Modes
-  // ==========================
-  const APP = 'APP'
-  const DEVENV = 'DEVENV'
-  // ==========================
-  //        Functions
-  // ==========================
-
-  const {mode, transition, back } = useVisualMode(
-    dev ? DEVENV : APP 
-  )
 
   return (
     <div className="App">
-      {mode === DEVENV && <Backyard transition={() => transition(APP)}/>}
 
-      {mode === APP && <NavBar />}
-      {mode === APP && <QuickNav 
+      <NavBar />
+      <QuickNav 
         codePenLink={codePenLink}
         linkedInLink={linkedInLink}
         gitHubLink={gitHubLink} 
         codeCampLink={codeCampLink} 
         resume={resumePDF}
-      />}
+      />
     
-      {mode == APP && (<div id='content-container'>
+      <div id='content-container'>
         <h1 id="welcome-title">Welcome!</h1>
         <img className='profile-picture' src={profilePicture} alt='profile picture' id='profile-picture' width={300} height={300}></img>
 
-        {mode === APP && <AboutMe info={aboutMeObject}/>}
-        {mode === APP && <Projects projectArray={projectsArray}/>}
-        {mode === APP && <Skills skillArray={skillsArray} />}
-        {mode === APP && (
+        <AboutMe info={aboutMeObject}/>
+        <Projects projectArray={projectsArray}/>
+        <Skills skillArray={skillsArray} />
+        
         <ContactMe 
           linkedIn={linkedInLink} 
           icons={[fontAwesomeIcons.sms, fontAwesomeIcons.linkedIn, fontAwesomeIcons.email]} 
-        />)}
-      </div>)}
-
-      
-      {/* {mode === APP && <button onClick={() => transition(DEVENV)}>backyard</button>} */}
+        />
+      </div>
     </div>
   );
 }
