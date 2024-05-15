@@ -42,12 +42,8 @@ function App() {
   // ==========================
   //       App Variables
   // ==========================
-<<<<<<< HEAD
-  const [dev, setDev] = useState(true);
-=======
   const [dev, setDev] = useState(false);
   const apiKey = process.env.REACT_APP_API_KEY;
->>>>>>> development
 
 
   const codePenLink = 'https://codepen.io/declawedlyon'
