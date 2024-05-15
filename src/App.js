@@ -35,7 +35,6 @@ import schedulerPhoto from './images/projects/schedulerImage_2.png'
 import jqueryLogo from './images/skills/jquery_logo_icon_167804.png'
 import resumePDF from './images/DeclanLyonsResume.pdf'
 import spwImage from './images/projects/SPWStore.png'
-import Backyard from './components/backyard/Backyard';
 import sagelyPhoto from './images/projects/Sagely.png'
 
 function App() {
@@ -201,7 +200,7 @@ function App() {
 
   return (
     <div className="App">
-      {mode === DEVENV && <Backyard transition={() => transition(APP)}/>}
+
 
       {mode === APP && <NavBar />}
       {mode === APP && <QuickNav 
@@ -227,7 +226,7 @@ function App() {
       </div>)}
 
       
-      {/* {mode === APP && <button onClick={() => transition(DEVENV)}>backyard</button>} */}
+
     </div>
   );
 }
