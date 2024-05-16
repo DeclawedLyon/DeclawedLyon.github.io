@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.47cde57a.css",
-    "main.js": "/static/js/main.6a646dab.js",
+    "main.css": "/static/css/main.e82b1e72.css",
+    "main.js": "/static/js/main.596baafe.js",
     "static/media/SPWStore.png": "/static/media/SPWStore.c3a57e969d4488199a1f.png",
     "static/media/20220321_184854.jpg": "/static/media/20220321_184854.d17542195ae84ef55827.jpg",
     "static/media/bookWorld_2.png": "/static/media/bookWorld_2.ed00cf90fd994f1c9080.png",
@@ -12,11 +12,11 @@
     "static/media/DeclanLyonsResume.pdf": "/static/media/DeclanLyonsResume.1bb26ca36249113a27f4.pdf",
     "static/media/jquery_logo_icon_167804.png": "/static/media/jquery_logo_icon_167804.59c0d4d26fb6326be9c3.png",
     "index.html": "/index.html",
-    "main.47cde57a.css.map": "/static/css/main.47cde57a.css.map",
-    "main.6a646dab.js.map": "/static/js/main.6a646dab.js.map"
+    "main.e82b1e72.css.map": "/static/css/main.e82b1e72.css.map",
+    "main.596baafe.js.map": "/static/js/main.596baafe.js.map"
   },
   "entrypoints": [
-    "static/css/main.47cde57a.css",
-    "static/js/main.6a646dab.js"
+    "static/css/main.e82b1e72.css",
+    "static/js/main.596baafe.js"
   ]
 }
